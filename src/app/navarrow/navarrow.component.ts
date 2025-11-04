@@ -1,0 +1,11 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-navarrow',
+  imports: [],
+  templateUrl: './navarrow.component.html',
+  styleUrl: './navarrow.component.scss'
+})
+export class NavarrowComponent {
+
+}

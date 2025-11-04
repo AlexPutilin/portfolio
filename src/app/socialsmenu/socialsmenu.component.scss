@@ -1,0 +1,49 @@
+@use '../../styles.scss' as *;
+
+nav {
+    color: var(--text-base);
+    @include flex($ai: center, $gap: 32px);
+    >.socials-container {
+        @include flex($gap: 16px);
+    }
+}
+
+.lang-switch {
+    @include flex($ai: center, $gap: 8px);
+    button {
+        border: 0;
+        background: none;
+        color: var(--text-base);
+        font-size: 20px;
+        font-weight: 700;
+        transition: color 125ms ease-in-out;
+        &:hover {
+            color: var(--color-main);
+        }
+    }
+    span {
+        cursor: default;
+    }
+}
+
+.link-icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    cursor: pointer;
+    img {
+        display: block;
+        position: absolute;
+        transition: opacity 125ms ease-in-out;
+    }
+    .icon-hover {
+        opacity: 0;
+    }
+    &:hover {
+        .icon-hover {
+            opacity: 1;
+        }
+    }
+}
+
+

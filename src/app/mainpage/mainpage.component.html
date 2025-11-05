@@ -2,8 +2,5 @@
     <app-navbar></app-navbar>
     <app-herosection (nextSection)="scrollNext()"></app-herosection>
     <app-aboutsection (nextSection)="scrollNext()"></app-aboutsection>
-    <!-- <progress [value]="(currentSection / (sections.length - 1)) * 100" max="100"></progress> -->
-    <div class="progress">
-        <div class="progress-bar" [style.width.%]="(currentSection / (sections.length - 1)) * 100"></div>
-    </div>
+    <app-progressbar [progress]="(currentSection / (sections.length - 1)) * 100"></app-progressbar>
 </main>

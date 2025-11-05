@@ -2,10 +2,11 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { HerosectionComponent } from '../herosection/herosection.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
+import { ProgressbarComponent } from '../progressbar/progressbar.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [HerosectionComponent, NavbarComponent, AboutsectionComponent],
+  imports: [HerosectionComponent, NavbarComponent, AboutsectionComponent, ProgressbarComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })

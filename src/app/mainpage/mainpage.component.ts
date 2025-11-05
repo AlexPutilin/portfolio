@@ -3,10 +3,11 @@ import { HerosectionComponent } from '../herosection/herosection.component';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
 import { ProgressbarComponent } from '../progressbar/progressbar.component';
+import { HeaderComponent } from '../header/header.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [HerosectionComponent, NavbarComponent, AboutsectionComponent, ProgressbarComponent],
+  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, ProgressbarComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })

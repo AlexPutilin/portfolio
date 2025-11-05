@@ -6,9 +6,11 @@
     top: 50%;
     border-radius: 12px;
     color: var(--color-main);
+    transition: transform 125ms ease-in-out;
     cursor: pointer;
     &:hover {
         filter: url(#glow-shadow);
+        transform: translateX(10px);
     }
     svg {
         width: 100%;

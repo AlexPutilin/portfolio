@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { SocialsmenuComponent } from '../socialsmenu/socialsmenu.component';
 import { NavarrowComponent } from '../navarrow/navarrow.component';
 
@@ -9,5 +9,5 @@ import { NavarrowComponent } from '../navarrow/navarrow.component';
   styleUrl: './herosection.component.scss'
 })
 export class HerosectionComponent {
-
+  @Output() nextSection = new EventEmitter();
 }

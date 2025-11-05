@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navarrow',
@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './navarrow.component.scss'
 })
 export class NavarrowComponent {
-
+  @Output() next = new EventEmitter();
+  @Output() prev = new EventEmitter();
 }

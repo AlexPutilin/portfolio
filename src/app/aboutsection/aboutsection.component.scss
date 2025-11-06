@@ -1,0 +1,81 @@
+@use '../../styles.scss' as *;
+
+section {
+    width: 100vw;
+    height: 100%;
+    position: relative;
+    @include flex(column, center, start);
+    >div {
+        max-width: 1000px;
+        padding-block: 156px;
+        @include flex($gap: 32px);
+        >div {
+            @include flex(column, end, $gap: 56px);
+            >div {
+                width: 100%;
+                >div {
+                    width: 100%;
+                    @include flex($ai: center, $jc: space-between);
+                }
+            }
+        }
+    }
+}
+
+h2 {
+    font-size: 72px;
+    color: transparent;
+    writing-mode: sideways-lr;
+    -webkit-text-stroke: 2px var(--color-main);
+}
+
+h3 {
+    width: 100%;
+    font-size: 56px;
+    color: var(--color-main);
+}
+
+p {
+    width: 100%;
+    font-size: 24px;
+    color: var(--text-base);
+}
+
+.info-box {
+    width: 30%;
+    @include flex(column, center, center);
+    cursor: pointer;
+    span {
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+        color: var(--text-base);
+        transition: color 125ms ease-in-out;
+    }
+    .icon-wrapper {
+        width: 56px;
+        height: 56px;
+        position: relative;
+        img {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            transition: opacity 125ms ease-in-out;
+        }
+        .icon-hover {
+            opacity: 0;
+        }
+    }
+    &:hover {
+        .icon-wrapper{
+            .icon-hover {
+                opacity: 1;
+            }
+        }
+        span {
+            color: var(--color-main);
+        }
+    }
+}
+

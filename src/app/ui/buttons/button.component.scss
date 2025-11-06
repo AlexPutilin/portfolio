@@ -1,0 +1,36 @@
+.btn {
+    padding: 16px 28px;
+    border: 0;
+    border-radius: 28px;
+    font-size: 16px;
+    transition: all 125ms ease-in-out;
+}
+
+.primary {
+    color: var(--text-dark);
+    background-color: var(--color-main);
+    &:hover {
+        box-shadow: inset -6px -6px 12px 2px rgba(0, 0, 0, 0.1), inset -6px -6px 8px 6px rgba(0, 0, 0, 0.10);
+    }
+    &:disabled {
+        color: var(--text-disabled-main);
+        background-color: var(--color-disabled);
+        box-shadow: none;
+        cursor: default;
+    }
+}
+
+.secondary {
+    border: 2px solid var(--color-main);
+    color: var(--color-main);
+    background-color: transparent;
+    &:hover {
+        border-color: var(--color-secondary);
+        color: var(--text-base);
+        background-color: var(--bg-card);
+    }
+    &:disabled {
+        border-color: var(--border-disabled);
+        color: var(--text-disabled-outline);
+    }
+}

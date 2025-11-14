@@ -5,6 +5,7 @@ section {
     height: 100%;
     position: relative;
     @include flex(column, center, start);
+    background: linear-gradient(to right, var(--bg-base), #2b2b2b);
     >div {
         max-width: 1000px;
         padding-block: 156px;

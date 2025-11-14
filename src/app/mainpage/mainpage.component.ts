@@ -16,7 +16,7 @@ export class MainpageComponent {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLElement>;
   currentSection = 0;
   sections = ['hero', 'about', 'skills', 'contact'];
-  private isScrolling = false;
+  isScrolling = false;
 
   scrollNext() {
     const nextIndex = Math.min(this.currentSection + 1, this.sections.length - 1);
@@ -28,7 +28,7 @@ export class MainpageComponent {
     this.scrollToSection(prevIndex);
   }
 
-  private scrollToSection(index: number) {
+  scrollToSection(index: number) {
     if (!this.scrollContainer) return;
     const scrollBox = this.scrollContainer?.nativeElement;
     const width = scrollBox.clientWidth;

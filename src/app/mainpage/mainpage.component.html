@@ -1,6 +1,6 @@
 <main #scrollContainer>
     <app-header></app-header>
-    <app-navbar></app-navbar>
+    <app-navbar (navigate)="scrollToSection($event)" [activeSectionIndex]="currentSection"></app-navbar>
     <app-herosection (nextSection)="scrollNext()"></app-herosection>
     <app-aboutsection (nextSection)="scrollNext()"></app-aboutsection>
     <app-progressbar [progress]="(currentSection / (sections.length - 1)) * 100"></app-progressbar>

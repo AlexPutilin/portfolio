@@ -9,5 +9,5 @@ import { ButtonComponent } from '../ui/buttons/button.component';
   styleUrl: './aboutsection.component.scss'
 })
 export class AboutsectionComponent {
-  @Output() nextSection = new EventEmitter();
+  
 }

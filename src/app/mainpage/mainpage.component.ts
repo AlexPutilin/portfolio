@@ -4,10 +4,11 @@ import { NavbarComponent } from '../navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
 import { ProgressbarComponent } from '../progressbar/progressbar.component';
 import { HeaderComponent } from '../header/header.component';
+import { NavarrowComponent } from '../navarrow/navarrow.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, ProgressbarComponent],
+  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, ProgressbarComponent, NavarrowComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })

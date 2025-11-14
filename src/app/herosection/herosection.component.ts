@@ -8,5 +8,5 @@ import { NavarrowComponent } from '../navarrow/navarrow.component';
   styleUrl: './herosection.component.scss'
 })
 export class HerosectionComponent {
-  @Output() nextSection = new EventEmitter();
+
 }

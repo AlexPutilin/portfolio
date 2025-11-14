@@ -1,13 +1,12 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { NavarrowComponent } from '../navarrow/navarrow.component';
+import { Component } from '@angular/core';
 import { ButtonComponent } from '../ui/buttons/button.component';
 
 @Component({
   selector: 'app-aboutsection',
-  imports: [NavarrowComponent, ButtonComponent],
+  imports: [ButtonComponent],
   templateUrl: './aboutsection.component.html',
   styleUrl: './aboutsection.component.scss'
 })
 export class AboutsectionComponent {
-  
+
 }

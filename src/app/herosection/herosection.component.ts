@@ -1,9 +1,8 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { NavarrowComponent } from '../navarrow/navarrow.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-herosection',
-  imports: [NavarrowComponent],
+  imports: [],
   templateUrl: './herosection.component.html',
   styleUrl: './herosection.component.scss'
 })

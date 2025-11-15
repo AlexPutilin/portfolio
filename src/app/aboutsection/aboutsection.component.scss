@@ -5,9 +5,9 @@ section {
     height: 100%;
     position: relative;
     @include flex(column, center, start);
-    background: linear-gradient(to right, var(--bg-base), #2b2b2b);
+    background: linear-gradient(to right, var(--bg-base) 0%, #2b2b2b, #2b2b2b);
     >div {
-        max-width: 1000px;
+        max-width: 1024px;
         padding-block: 156px;
         @include flex($gap: 32px);
         >div {
@@ -34,12 +34,6 @@ h3 {
     width: 100%;
     font-size: 56px;
     color: var(--color-main);
-}
-
-p {
-    width: 100%;
-    font-size: 24px;
-    color: var(--text-base);
 }
 
 .info-box {

@@ -5,17 +5,18 @@ import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
 import { ProgressbarComponent } from '../progressbar/progressbar.component';
 import { HeaderComponent } from '../header/header.component';
 import { NavarrowComponent } from '../navarrow/navarrow.component';
+import { SkillssectionComponent } from '../skillssection/skillssection.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, ProgressbarComponent, NavarrowComponent],
+  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, SkillssectionComponent, ProgressbarComponent, NavarrowComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
 export class MainpageComponent {
   @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLElement>;
   currentSection = 0;
-  sections = ['hero', 'about', 'skills', 'contact'];
+  sections = ['hero', 'about', 'skills', 'projects', 'contact'];
   isScrolling = false;
 
   scrollNext() {

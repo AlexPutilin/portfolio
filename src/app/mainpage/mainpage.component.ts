@@ -1,10 +1,10 @@
 import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { HerosectionComponent } from '../herosection/herosection.component';
-import { NavbarComponent } from '../navbar/navbar.component';
+import { NavbarComponent } from '../ui/navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
 import { ProgressbarComponent } from '../progressbar/progressbar.component';
 import { HeaderComponent } from '../header/header.component';
-import { NavarrowComponent } from '../navarrow/navarrow.component';
+import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
 import { SkillssectionComponent } from '../skillssection/skillssection.component';
 
 @Component({

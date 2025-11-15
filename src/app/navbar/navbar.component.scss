@@ -7,7 +7,7 @@ aside {
     z-index: 10;
     padding-block: 24px;
     background-color: var(--color-main);
-    box-shadow: inset -4px 0 6px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: inset -4px 0 6px 4px rgba(0, 0, 0, 0.2), 8px 0px 24px 12px rgba(0, 0, 0, 0.2), 24px 0px 40px 24px rgba(0, 0, 0, 0.15);
     @include flex($dir: column);
     >nav {
         width: 100%;

@@ -10,7 +10,7 @@ header {
 }
 nav {
     color: var(--text-base);
-    @include flex($ai: center, $gap: 32px);
+    @include flex($ai: center, $gap: 40px);
     >.socials-container {
         @include flex($gap: 16px);
     }
@@ -35,11 +35,13 @@ nav {
 }
 
 .link-icon {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     position: relative;
     cursor: pointer;
     img {
+        width: auto;
+        height: 100%;
         display: block;
         position: absolute;
         transition: opacity 125ms ease-in-out;

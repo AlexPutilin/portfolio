@@ -1,7 +1,7 @@
 @use '../../../styles.scss' as *;
 
 aside {
-    width: 150px;
+    width: 200px;
     height: 100%;
     position: fixed;
     z-index: 10;
@@ -19,7 +19,7 @@ aside {
             font-size: 32px;
             line-height: 36px;
             color: var(--text-dark);
-            transition: color 125ms ease-in-out;
+            transition: all 125ms ease-in-out;
             &:hover {
                 color: var(--text-base);
             }
@@ -33,6 +33,9 @@ aside {
 }
 
 .active {
-    color: var(--color-main) !important;
-    -webkit-text-stroke: 1px var(--text-dark);
+    color: var(--text-base) !important;
+    font-weight: 500 !important;
+    // color: var(--color-main) !important;
+    // -webkit-text-stroke: 1px var(--text-dark);
+    // text-shadow: -2px -2px 0 var(--text-dark), 2px -2px 0 var(--text-dark), -2px 2px 0 var(--text-dark), 2px 2px 0 var(--text-dark);
 }

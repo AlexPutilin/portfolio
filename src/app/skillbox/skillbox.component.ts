@@ -9,6 +9,6 @@ import { NgOptimizedImage } from "@angular/common";
 })
 export class SkillboxComponent {
   @Input() skillName: string = "";
-
-  imgPath: string = `/icons/${this.skillName}.svg`
+  
+  imgPath: string = `/icons/${this.skillName}.svg`;
 }

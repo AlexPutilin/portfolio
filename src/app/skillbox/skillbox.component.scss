@@ -26,3 +26,14 @@ div {
         }   
     }
 }
+
+:host {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 125ms ease-out;
+}
+
+:host.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}

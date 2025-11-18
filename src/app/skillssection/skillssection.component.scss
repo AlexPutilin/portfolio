@@ -1,18 +1,13 @@
 @use '../../styles.scss' as *;
 
 section {
-    width: 100vw;
-    height: 100%;
-    position: relative;
-    padding-inline: 64px;
-    @include flex(column, center, end);
+    @include flex($ai: end);
     background: linear-gradient(to right, #2b2b2b, #1b1b1b, var(--bg-base));
     >div {
-        max-width: 1024px;
-        padding-block: 156px;
-        @include flex($gap: 32px);
+        max-width: 1280px;
+        @include flex($gap: 40px);
         >div {
-            @include flex(column, end, $gap: 56px);
+            @include flex(column, end, $gap: 40px);
             >div {
                 width: 100%;
                 @include flex($gap: 12px);

@@ -15,6 +15,14 @@
     --border-disabled: #827B7B;
 }
 
+@mixin flex($dir: row, $ai: start, $jc: start, $gap: 0) {
+    display: flex;
+    flex-direction: $dir;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $gap;
+}
+
 * {  
     box-sizing: border-box;
     margin: 0;
@@ -39,10 +47,13 @@ p {
     color: var(--text-base);
 }
 
-@mixin flex($dir: row, $ai: start, $jc: start, $gap: 0) {
-    display: flex;
-    flex-direction: $dir;
-    align-items: $ai;
-    justify-content: $jc;
-    gap: $gap;
+section {
+    width: 100vw;
+    height: 100%;
+    padding-block: 156px;
+    padding-inline: 264px 64px;
+    position: relative;
+    @include flex();
 }
+
+

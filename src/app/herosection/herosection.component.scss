@@ -1,15 +1,11 @@
 @use '../../styles.scss' as *;
 
 section {
-    width: 100vw;
-    height: 100%;
-    position: relative;
     background-image: url('/imgs/hero-background.jpg');
     background-size: cover;
-    @include flex(column, center, center);
+    @include flex($jc: center, $ai: center);
     >div {
-        flex: 1;
-        padding-block: 156px;
+        height: 100%;
         @include flex(column, center, end);
     }
 }

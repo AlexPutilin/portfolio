@@ -1,4 +1,4 @@
-import { afterNextRender, Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { afterNextRender, Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { SkillboxComponent } from '../skillbox/skillbox.component';
 
 @Component({
@@ -28,10 +28,10 @@ export class SkillssectionComponent {
     });
   }
 
-  @ViewChildren(SkillboxComponent, { read: ElementRef })
-  skillBoxes!: QueryList<ElementRef>;
+  @ViewChildren(SkillboxComponent, { read: ElementRef }) skillBoxes!: QueryList<ElementRef>;
+  @ViewChild("skillbox", { read: ElementRef }) skillbox!: ElementRef;
 
-  private observer = new IntersectionObserver((entries) => {
+  observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         (entry.target as HTMLElement).classList.add('in-view');
@@ -45,5 +45,8 @@ export class SkillssectionComponent {
       skillBox.style.transitionDelay = `${index * 0.04}s`;
       this.observer.observe(skillBox);
     });
+    if (this.skillbox) {
+      this.observer.observe(this.skillbox.nativeElement);
+    }
   }
 }

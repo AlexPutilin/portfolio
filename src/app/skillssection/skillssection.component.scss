@@ -24,14 +24,72 @@ h2 {
     -webkit-text-stroke: 3px var(--color-main);
 }
 
+.infobox {
+    max-width: 280px;
+    padding: 8px;
+    position: relative;
+    @include flex(column, center, $gap: 16px);
+    border-radius: 16px;
+    border: 2px solid var(--color-secondary);
+    background-color: var(--bg-card);
+    opacity: 0;
+    transition: opacity 125ms ease-in-out;
+    p {
+        text-align: center;
+        font-size: 20px;
+    }
+    >div {
+        @include flex();
+        flex: 1;
+        div {
+            width: 80px;
+            height: 80px;
+            @include flex(column, center);
+            color: var(--text-base);
+            img {
+                width: auto;
+                height: 48px;
+                transition: all 125ms ease-in-out;
+            }
+            span {
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                align-content: center;
+                font-size: 16px;
+                
+            }
+        }
+    }
+}
+
+.infobox::after {
+    content: " ";
+    position: absolute;
+    top: 0%;
+    right: 100%;
+    margin-top: 10px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: transparent var(--color-secondary) transparent transparent;
+}
+
+.skill-box-wrapper {
+    @include flex($gap: 8px);
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: all 125ms ease-in-out;
+    transition-delay: 0.44s;
+}
+
 .skill-box {
     width: 100px;
     height: 100px;
+    position: relative;
     @include flex(column, $ai: center);
     flex-shrink: 0;
     color: var(--text-base);
     transition: color 125ms ease-in-out;
-    cursor: pointer;
     div {
         width: 64px;
         height: 64px;
@@ -47,7 +105,6 @@ h2 {
         text-align: center;
         align-content: center;
         font-size: 18px;
-        
     }
     &:hover {
         color: var(--color-main);
@@ -56,6 +113,24 @@ h2 {
         }
         svg {
             filter: drop-shadow(0px 0px 12px var(--bg-card));
-        }   
+        }
     }
+    &:hover + .infobox {
+        opacity: 1;
+    }
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.svg-circle {
+    transform-origin: center;
+    animation: rotate 4s infinite linear;
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0);}
+    100% {transform: rotate(-360deg);}
 }

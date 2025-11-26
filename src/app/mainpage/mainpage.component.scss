@@ -1,5 +1,14 @@
 main {
     height: 100%;
     display: flex;
-    overflow-x: hidden;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
+
+main::-webkit-scrollbar {
+  display: none;
+}
+

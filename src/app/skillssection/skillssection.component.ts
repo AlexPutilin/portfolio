@@ -1,13 +1,16 @@
-import { afterNextRender, Component, ElementRef, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { afterNextRender, Component, ElementRef, EventEmitter, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { SkillboxComponent } from '../skillbox/skillbox.component';
+import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
 
 @Component({
   selector: 'app-skillssection',
-  imports: [SkillboxComponent],
+  imports: [SkillboxComponent, NavarrowComponent],
   templateUrl: './skillssection.component.html',
   styleUrl: './skillssection.component.scss'
 })
 export class SkillssectionComponent {
+  @Output() nextSection = new EventEmitter();
+
   skillList = [
     'Angular',
     'TypeScript',

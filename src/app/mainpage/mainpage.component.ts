@@ -2,14 +2,14 @@ import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { HerosectionComponent } from '../herosection/herosection.component';
 import { NavbarComponent } from '../ui/navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
-import { ProgressbarComponent } from '../progressbar/progressbar.component';
+import { ProgressbarComponent } from '../ui/progressbar/progressbar.component';
 import { HeaderComponent } from '../header/header.component';
 import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
 import { SkillssectionComponent } from '../skillssection/skillssection.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, SkillssectionComponent, ProgressbarComponent, NavarrowComponent],
+  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, SkillssectionComponent, ProgressbarComponent],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.scss'
 })
@@ -39,14 +39,14 @@ export class MainpageComponent {
     setTimeout(() => (this.isScrolling = false), 500);
   }
 
-  @HostListener('wheel', ['$event'])
-  onWheel(event: WheelEvent) {
-    event.preventDefault();
-    if (this.isScrolling) return;
-    if (event.deltaY > 0) {
-      this.scrollNext();
-    } else if (event.deltaY < 0) {
-      this.scrollPrev();
-    }
-  }
+  // @HostListener('wheel', ['$event'])
+  // onWheel(event: WheelEvent) {
+  //   event.preventDefault();
+  //   if (this.isScrolling) return;
+  //   if (event.deltaY > 0) {
+  //     this.scrollNext();
+  //   } else if (event.deltaY < 0) {
+  //     this.scrollPrev();
+  //   }
+  // }
 }

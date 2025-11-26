@@ -1,0 +1,16 @@
+.progress {
+    width: 100%;
+    height: 3px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--bg-base);
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: var(--color-main);
+    transition: width 500ms ease-in-out;
+}

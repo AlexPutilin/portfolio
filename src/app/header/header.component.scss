@@ -2,13 +2,19 @@
 
 header {
     width: 100%;
-    max-width: 1920px;
     height: 100px;
     padding-inline: min(64px, 5%);
     position: fixed;
     background: linear-gradient(to bottom, var(--color-bg), transparent);
+    @include flex($jc: center);
+}
+
+.content-limit {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
     @include flex($jc: space-between, $ai: center);
-    >nav {
+    nav {
         @include flex($gap: 24px);
     }
 }
@@ -31,6 +37,7 @@ header {
 .nav-link {
     @include flex(column, center, center);
     font-size: 24px;
+    transform: translateY(4px);
     span {
         width: 8px;
         height: 8px;

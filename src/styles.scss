@@ -1,18 +1,15 @@
 @use 'styles/fonts.scss';
 
 :root {
-    --color-main: #B5E93B;
-    --color-secondary: #D3ED97;
-    --color-disabled: #9E9D9D;
-    --color-error: #FD2E12;
-    --bg-base: #000000;
-    --bg-card: #b5e93b80;
+    --color-main: #E8B91B;
+    --color-secondary-active: rgba(232, 185, 27, 0.3);
+    --color-secondary-passive: rgba(232, 185, 27, 0.1);
+    --color-disabled: #827B7B;
+    --color-error: #C56A6A;
+    --color-bg: #1C1C1C;
     --text-base: #FFFDFD;
     --text-dark: #1F1F1F;
-    --text-disabled-main: #4A4A4A; 
-    --text-disabled-outline: #827B7B;
-    --text-shadow: -0.1px -0.1px 0 var(--color-main);
-    --border-disabled: #827B7B;
+    --gradient: linear-gradient(#1C1C1C, #FFCA1B);
 }
 
 @mixin flex($dir: row, $ai: start, $jc: start, $gap: 0) {

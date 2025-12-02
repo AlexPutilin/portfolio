@@ -1,12 +1,14 @@
-main {
-    height: 100%;
-    display: flex;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-}
+// main {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   scroll-behavior: smooth;
+//   scrollbar-width: none;
+//   -webkit-overflow-scrolling: touch;
+//   background-color: yellow;
+// }
 
 main::-webkit-scrollbar {
   display: none;

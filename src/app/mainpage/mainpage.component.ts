@@ -1,52 +1,17 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
 import { HerosectionComponent } from '../herosection/herosection.component';
 import { NavbarComponent } from '../ui/navbar/navbar.component';
 import { AboutsectionComponent } from '../aboutsection/aboutsection.component';
-import { ProgressbarComponent } from '../ui/progressbar/progressbar.component';
 import { HeaderComponent } from '../header/header.component';
-import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
 import { SkillssectionComponent } from '../skillssection/skillssection.component';
 
 @Component({
   selector: 'app-mainpage',
-  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, SkillssectionComponent, ProgressbarComponent],
+  imports: [NavbarComponent, HeaderComponent, HerosectionComponent, AboutsectionComponent, SkillssectionComponent],
   templateUrl: './mainpage.component.html',
-  styleUrl: './mainpage.component.scss'
+  styleUrl: './mainpage.component.scss',
+  standalone: true
 })
 export class MainpageComponent {
-  @ViewChild('scrollContainer') scrollContainer!: ElementRef<HTMLElement>;
-  currentSection = 0;
-  sections = ['hero', 'about', 'skills', 'projects', 'contact'];
-  isScrolling = false;
 
-  scrollNext() {
-    const nextIndex = Math.min(this.currentSection + 1, this.sections.length - 1);
-    this.scrollToSection(nextIndex);
-  }
-
-  scrollPrev() {
-    const prevIndex = Math.max(this.currentSection - 1, 0);
-    this.scrollToSection(prevIndex);
-  }
-
-  scrollToSection(index: number) {
-    if (!this.scrollContainer) return;
-    const scrollBox = this.scrollContainer?.nativeElement;
-    const width = scrollBox.clientWidth;
-    scrollBox.scrollTo({ left: width * index, behavior: 'smooth' });
-    this.currentSection = index;
-    this.isScrolling = true;
-    setTimeout(() => (this.isScrolling = false), 500);
-  }
-
-  // @HostListener('wheel', ['$event'])
-  // onWheel(event: WheelEvent) {
-  //   event.preventDefault();
-  //   if (this.isScrolling) return;
-  //   if (event.deltaY > 0) {
-  //     this.scrollNext();
-  //   } else if (event.deltaY < 0) {
-  //     this.scrollPrev();
-  //   }
-  // }
 }

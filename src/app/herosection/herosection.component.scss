@@ -1,25 +1,114 @@
 @use '../../styles.scss' as *;
 
 section {
-    background-image: url('/imgs/hero-background.jpg');
-    background-size: cover;
+    width: 100%;
+    padding-inline: min(64px, 5%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(25deg, var(--color-bg) 60%, var(--color-secondary-passive));
+}
+
+.content-limit {
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+}
+
+.content {
+    width: 100%;
+    height: 100vh;
     @include flex($jc: center, $ai: center);
-    >div {
+    .hero {
+        @include flex(column, center, center);
+        flex: 1;
+        >div {
+            margin-top: 56px;
+            @include flex($gap: 56px);
+        }
+    }
+    >:nth-child(1) {
         height: 100%;
-        @include flex(column, center, end);
+        @include flex(column, center, end, 32px);
+        >span {
+            width: 2px;
+            height: 25%;
+            background-color: var(--color-main);
+        };
+    }
+    >:nth-child(3) {
+        height: 100%;
+        @include flex(column, center, end, 32px);
+        nav {
+            @include flex(column, $gap: 16px);
+        }
+        >span {
+            width: 2px;
+            height: 25%;
+            background-color: var(--color-main);
+            transform: translateX(-8px)
+        };
     }
 }
 
-h1 {
-    font-size: 96px;
+.link-icon {
     color: var(--color-main);
+    transition: color 125ms ease-in-out;
+    @include flex($ai: center, $gap: 4px);
+    cursor: pointer;
+    >span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--color-main);
+        opacity: 0;
+        transition: opacity 125ms ease-in-out;
+    }
+    &:hover {
+        color: var(--text-base);
+        >span {
+            opacity: 1;
+        }
+    }
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    svg {   
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.btn-scroll {
+    width: 40px;
+    height: 64px;
+    @include flex($jc: center, $ai: center);
+    border-radius: 20px;
+    border: 2px solid var(--color-main);
+    color: var(--text-base);
+    background-color: transparent;
+    >.icon-wrapper {
+        width: 16px;
+        height: 24px;
+        transition: all 125ms ease-in-out;
+    }
+    &:hover {
+        >.icon-wrapper {
+            transform: translateY(8px);
+        }
+    }
+}
+
+
+h1 {
+    font-size: 120px;
+    text-align: center;
 }
 
 h2 {
-    width: 100%;
-    font-size: 72px;
-    color: transparent;
-    text-align: right;
-    -webkit-text-stroke: 3px var(--color-main);
-    // text-shadow: -2px -2px 0 var(--color-main), 2px -2px 0 var(--color-main), -2px 2px 0 var(--color-main), 2px 2px 0 var(--color-main);
+    font-size: 56px;
+    font-family: 'Fira Code', 'Segoe UI', sans-serif;
+    text-align: center;
 }

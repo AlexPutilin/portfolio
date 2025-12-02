@@ -1,11 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
-import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from '../ui/buttons/button.component';
 
 
 @Component({
   selector: 'app-herosection',
-  imports: [NavarrowComponent, CommonModule],
+  imports: [ButtonComponent, CommonModule],
   templateUrl: './herosection.component.html',
   styleUrl: './herosection.component.scss'
 })

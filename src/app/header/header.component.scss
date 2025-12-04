@@ -5,13 +5,16 @@ header {
     height: 100px;
     padding-inline: min(64px, 5%);
     position: fixed;
-    background: linear-gradient(to bottom, var(--color-bg), transparent);
+    background: linear-gradient(to bottom, rgba(49, 39, 4, 0.4),#00000011);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 3px 3px rgba($color: #000000, $alpha: 0.1);
     @include flex($jc: center);
+    z-index: 100;
 }
 
 .content-limit {
     width: 100%;
-    max-width: 1920px;
+    max-width: 1440px;
     height: 100%;
     @include flex($jc: space-between, $ai: center);
     nav {

@@ -7,7 +7,8 @@
     --color-disabled: #827B7B;
     --color-error: #C56A6A;
     --color-bg: #1C1C1C;
-    --text-base: #FFFFFF;
+    --text-base: #e3e3e3;
+    --text-hover: #FFFFFF;
     --text-dark: #1F1F1F;
     --gradient: linear-gradient(#1C1C1C, #FFCA1B);
 }
@@ -40,10 +41,52 @@ button, a {
     cursor: pointer;
 }
 
-// p {
-//     width: 100%;
-//     font-size: 24px;
-//     color: var(--text-base);
+.content-limit {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+}
+
+h3 {
+    font-family: 'Fira Code', 'Segoe UI', sans-serif;
+    font-size: 64px;
+    color: var(--color-main);
+}
+
+
+p {
+    width: 100%;
+    font-size: 20px;
+}
+
+
+// @media (max-width: 1500) {
+    
 // }
 
+// @media (max-width: 1200) {
+    
+// }
 
+// @media (max-width: 992) {
+    
+// }
+
+@media (max-width: 768px) {
+    h3 {
+        font-size: 48px;
+    }
+    p {
+        font-size: 16px;
+    }
+}
+
+// @media (max-width: 576px) {
+
+// }
+
+@media (max-width: 476px) {
+    h3 {
+        font-size: 32px;
+    }
+}

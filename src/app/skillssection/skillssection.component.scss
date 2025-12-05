@@ -35,6 +35,13 @@ section {
     :last-child {
         margin-top: 24px;
     }
+    >p {
+        >span {
+            font-size: 28px;
+            font-weight: bold;
+        }
+    }
+
 }
 
 .technologies {
@@ -177,6 +184,11 @@ section {
     .skill-set {
         padding: 16px;
         gap: 12px;
+        >p {
+            >span {
+                font-size: 20px;
+            }
+        }
     }
     .technologies {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));

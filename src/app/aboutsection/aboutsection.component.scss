@@ -126,30 +126,11 @@ section {
     .content {
         height: auto;
         @include flex(column, center, start, 40px);
-        padding-block: 160px;
+        padding-block: 100px;
         >div {
             padding-block: 0px;
         }
     }
-}
-
-@media (max-width: 768px) {
-    .profile {
-        width: 480px;
-        height: 480px;
-        >.img-wrapper {
-            width: 480px;
-            height: 480px;
-        }
-    }
-    .about-me {
-        width: 480px;
-        .icon-wrapper {
-            width: 24px;
-            height: 24px;
-        }
-    }
-     
 }
 
 @media (max-width: 576px) {
@@ -171,14 +152,8 @@ section {
 }
 
 @media (max-width: 476px) {
-    .profile {
-        >.img-wrapper {
-        border-radius: 16px;
-        }
-    }
     .about-me {
-        padding: 8px;
-        border-radius: 16px;
+        padding: 16px;
         >div {
             @include flex($gap: 12px)
         }

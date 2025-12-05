@@ -22,15 +22,14 @@ div {
     &:hover {
         img {
             transform: scale(1.08);
-            filter: drop-shadow(0px 0px 12px var(--bg-card));
         }   
     }
 }
 
 :host {
     opacity: 0;
-    transform: translateX(-20px);
-    transition: all 125ms ease-out;
+    transform: translateX(-32px);
+    transition: all 500ms ease-out;
 }
 
 :host.in-view {

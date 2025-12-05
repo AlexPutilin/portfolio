@@ -1,19 +1,30 @@
 <section>
-    <div>
-        <h2>My Skill Set</h2>
-        <div>
-            <p>
-                As a junior front-end developer, I’ve gained experience working on a variety of projects where I built responsive and intuitive user interfaces. 
-                I enjoy turning ideas into functional, well-structured solutions and consistently improving the way I work. 
-                I’m always open to learning new technologies and am currently expanding my skills into backend development on my path toward becoming a full-stack developer.
-            </p>
+    <div class="content-limit">
+        <div class="content">
             <div>
+                <p>Technologies</p>
+                <div class="skill-set">
+                    <h3>Skill Set</h3>
+                    <p>
+                        As a junior front-end developer, I’ve gained experience working on a variety of projects where I built responsive and intuitive user interfaces. 
+                        I enjoy turning ideas into functional, well-structured solutions and consistently improving the way I work. 
+                        I’m always open to learning new technologies and am currently expanding my skills into backend development on my path toward becoming a full-stack developer.
+                    </p>
+                    <p>
+                        <span>You need </span><span style="color: var(--color-main)">another skill?</span>
+                    </p>
+                    <p>
+                        Feel free to contact me. I look forward to expanding on my previous knowledge.
+                    </p>
+                    <app-button>Let's Talk</app-button>
+                </div>
+            </div>
+            <div class="technologies">
                 @for (skill of skillList; track $index) {
                     <app-skillbox [skillName]="skillList[$index]"></app-skillbox>
                 }
-                <div #skillbox class="skill-box-wrapper">
-                    <div class="skill-box">
-                        <div class="svg-wrapper">
+                <div #skillbox class="skill-box">
+                    <div class="svg-wrapper">
                         <svg viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_3296_3870)">
                                 <path  d="M48.5067 25.5335L30.5742 35.7481C30.2514 35.9379 29.8527 35.9379 29.5204 35.7481L11.5879 25.5335C10.8854 25.1347 10.8854 24.119 11.5879 23.7108L29.5204 13.4962C29.8432 13.3063 30.2419 13.3063 30.5742 13.4962L48.5067 23.7108C49.2092 24.1095 49.2092 25.1252 48.5067 25.5335Z" fill="currentColor"/>
@@ -27,29 +38,28 @@
                                 </clipPath>
                             </defs>
                         </svg>
-                        </div>
-                        <span>Continue learning</span>
                     </div>
-                    <div class="infobox">
-                        <p>On my roadmap for future growth and learning.</p>
-                        <div>
-                            <div>
-                                <img src="./icons/Python.svg">
-                                <span>Python</span>
-                            </div>
-                            <div>
-                                <img src="./icons/Django.svg">
-                                <span>Django</span>
-                            </div>
-                            <div>
-                                <img src="./icons/SQL.svg">
-                                <span>SQL</span>
-                            </div>
-                        </div>
-                    </div>
+                    <span>Continue learning</span>
                 </div>
             </div>
         </div>
     </div>
-    <app-navarrow posTop="25%" (next)="nextSection.emit()"></app-navarrow>
 </section>
+
+<!-- <div class="infobox">
+    <p>On my roadmap for future growth and learning.</p>
+    <div>
+        <div>
+            <img src="./icons/Python.svg">
+            <span>Python</span>
+        </div>
+        <div>
+            <img src="./icons/Django.svg">
+            <span>Django</span>
+        </div>
+        <div>
+            <img src="./icons/SQL.svg">
+            <span>SQL</span>
+        </div>
+    </div>
+</div> -->

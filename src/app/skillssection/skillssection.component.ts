@@ -1,10 +1,11 @@
 import { afterNextRender, Component, ElementRef, EventEmitter, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { SkillboxComponent } from '../skillbox/skillbox.component';
 import { NavarrowComponent } from '../ui/navarrow/navarrow.component';
+import { ButtonComponent } from '../ui/buttons/button.component';
 
 @Component({
   selector: 'app-skillssection',
-  imports: [SkillboxComponent, NavarrowComponent],
+  imports: [SkillboxComponent, ButtonComponent],
   templateUrl: './skillssection.component.html',
   styleUrl: './skillssection.component.scss'
 })

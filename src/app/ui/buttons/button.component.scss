@@ -17,3 +17,10 @@ button {
         cursor: default;
     }
 }
+
+@media (max-width: 768px) {
+    button {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}

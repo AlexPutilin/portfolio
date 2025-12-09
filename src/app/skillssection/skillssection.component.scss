@@ -14,11 +14,6 @@ section {
     @include flex($jc: space-between);
     >:nth-child(1) {
         @include flex(column);
-        >p {
-            margin-bottom: 24px;
-            font-size: 32px;
-            color: var(--color-main);
-        }
     }
 }
 

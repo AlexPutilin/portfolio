@@ -53,6 +53,12 @@ h3 {
     color: var(--color-main);
 }
 
+.subtitle {
+    margin-bottom: 24px;
+    font-size: 32px;
+    color: var(--color-main);
+}
+
 
 p {
     width: 100%;
@@ -88,5 +94,8 @@ p {
 @media (max-width: 476px) {
     h3 {
         font-size: 32px;
+    }
+    .subtitle {
+        font-size: 24px;
     }
 }

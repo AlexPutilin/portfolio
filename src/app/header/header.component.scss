@@ -98,3 +98,31 @@ header {
         color: var(--text-base);
     }
 }
+
+@media (max-width: 800px) {
+    .nav-link {display: none}
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 80px;
+    }
+
+    .switch-wrapper {
+        height: 32px;
+        border-radius: 16px;
+        .switch {
+            width: 40px;
+            font-size: 20px;
+        }
+        .switch-checked {
+            width: 40px;
+            border-radius: 12px;
+        }
+    }
+
+    .logo {
+        >span {font-size: 24px}
+        >div {font-size: 20px}
+    }
+}

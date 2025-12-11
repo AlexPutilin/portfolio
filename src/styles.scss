@@ -47,6 +47,19 @@ button, a {
     height: 100%;
 }
 
+h1 {
+    // font-size: 120px;
+    font-size: clamp(32px, 7vw, 120px);
+    text-align: center;
+}
+
+h2 {
+    // font-size: 56px;
+    font-size: clamp(24px, 3vw, 56px);
+    font-family: 'Fira Code', 'Segoe UI', sans-serif;
+    text-align: center;
+}
+
 h3 {
     font-family: 'Fira Code', 'Segoe UI', sans-serif;
     font-size: 64px;
@@ -71,7 +84,7 @@ p {
 // }
 
 // @media (max-width: 1200) {
-    
+
 // }
 
 // @media (max-width: 992) {

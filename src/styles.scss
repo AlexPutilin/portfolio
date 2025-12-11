@@ -48,21 +48,19 @@ button, a {
 }
 
 h1 {
-    // font-size: 120px;
-    font-size: clamp(32px, 7vw, 120px);
+    font-size: 120px;
     text-align: center;
 }
 
 h2 {
-    // font-size: 56px;
-    font-size: clamp(24px, 3vw, 56px);
+    font-size: 56px;
     font-family: 'Fira Code', 'Segoe UI', sans-serif;
     text-align: center;
 }
 
-h3 {
-    font-family: 'Fira Code', 'Segoe UI', sans-serif;
+.categorie {
     font-size: 64px;
+    font-family: 'Fira Code', 'Segoe UI', sans-serif;
     color: var(--color-main);
 }
 
@@ -79,36 +77,39 @@ p {
 }
 
 
-// @media (max-width: 1500) {
+@media (max-width: 1500px) {
+    h1 {font-size: 92px}
+    h2 {font-size: 48px}
+}
+
+// @media (max-width: 1200px) {
     
 // }
 
-// @media (max-width: 1200) {
+@media (max-width: 992px) {
+    h1 {font-size: 72px}
+    h2 {font-size: 40px}
+}
 
-// }
-
-// @media (max-width: 992) {
-    
-// }
-
-// @media (max-width: 768px) {
-//     
-// }
+@media (max-width: 768px) {
+    h1 {font-size: 56px}
+    h2 {font-size: 32px}
+    .categorie {font-size: 48px}
+    .subtitle {margin-bottom: 16px}
+}
 
 @media (max-width: 576px) {
-    h3 {
-        font-size: 48px;
-    }
-    p {
-        font-size: 16px;
+    h1 {font-size: 48px}
+    h2 {font-size: 28px}
+    p {font-size: 16px}
+    .categorie {font-size: 32px}
+    .subtitle {
+        font-size: 24px;
     }
 }
 
 @media (max-width: 476px) {
-    h3 {
-        font-size: 32px;
-    }
-    .subtitle {
-        font-size: 24px;
-    }
+    h1 {font-size: 32px}
+    h2 {font-size: 20px}
+    .subtitle {font-size: 24px}
 }

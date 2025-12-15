@@ -1,0 +1,106 @@
+@use '../../styles.scss' as *;
+
+section {
+    width: 100%;
+    padding-inline: min(64px, 5%);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    margin-bottom: 160px;
+    @include flex(column, center, center);
+    >p {text-align: center;}
+}
+
+.diashow-frame {
+    width: 100%;
+    height: 400px;
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+    @include flex($jc: center, $gap: 64px);
+    .quotes {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 340px;
+    }
+}
+
+.diashow-frame::before,
+.diashow-frame::after {
+    width: 200px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    pointer-events: none;
+    content: "";
+}
+
+.diashow-frame::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.diashow-frame::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+.review-box {
+    width: 100%;
+    max-width: 700px;
+    height: 100%;
+    padding: 48px;
+    @include flex(column, center, space-between);
+    border-radius: 24px;
+    border: 2px solid var(--color-main);
+    background-color: var(--color-secondary-passive);
+    flex-shrink: 0;
+    font-size: 24px;
+    >p {font-size: 24px;}
+    >div {
+        width: 100%;
+        @include flex($ai: center, $gap: 16px);
+        >.line {
+            height: 2px;
+            flex: 1;
+            background-color: var(--text-base);
+        }
+    }
+}
+
+nav {
+    width: 100%;
+    height: 64px;
+    @include flex($ai: center, $jc: center, $gap: 24px);
+}
+
+.index-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--text-base);
+    transition: all 125ms ease-in-out;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--color-main);
+        transform: scale(1.2);
+    }
+}
+
+.icon-wrapper {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: color 125ms ease-in-out;
+    >svg {
+        width: 100%;
+        height: 100%;
+    }
+    &:hover {
+        color: var(--color-main);
+    }
+}

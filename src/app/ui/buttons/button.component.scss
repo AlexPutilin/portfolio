@@ -1,20 +1,53 @@
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
 button {
+    --border-width: 2px;
     padding: 16px 28px;
+    position: relative;
     font-size: 24px;
     color: var(--text-base);
     border-radius: 28px;
-    border: 2px solid var(--text-base);
-    background-color: transparent;
+    border: none;
+    background: transparent;
     transition: all 125ms ease-in-out;
-    &:hover {
-        color: var(--color-main);
-        border-color: var(--color-main);
+    z-index: 0;
+    &::before, &::after {
+        content: '';
+        padding: var(--border-width);
+        position: absolute;
+        inset: 0;
+        border-radius: inherit;
+        background: var(--text-base);
+        z-index: -1;
+        -webkit-mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        transition: all 125ms ease-in-out;
+    }
+    &:hover::before, &:hover::after {
+        background: conic-gradient(from var(--angle), transparent 30%, var(--color-main), transparent);
+        animation: 1.5s rotate-border linear infinite
     }
     &:disabled {
         color: var(--text-disabled-main);
         background-color: var(--color-disabled);
         box-shadow: none;
         cursor: default;
+    }
+}
+
+@keyframes rotate-border {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
     }
 }
 

@@ -3,9 +3,9 @@
         <div class="content">
             <p class="subtitle">What my colleagues say about me</p>
             <div class="diashow-frame">
-                <img class="quotes" src="./imgs/quotes.png">
                 @for (review of reviews; track $index) {
-                    <div class="review-box">
+                    <div class="review-box" [ngClass]="$index === 1 ? 'preview-active' : ''">
+                        <img class="quotes" src="./imgs/quotes.png">
                         <p>{{reviews[$index].review}}</p>
                         <div>
                             <span class="line"></span>
@@ -26,7 +26,7 @@
                     </svg>
                 </div>
                 @for (review of reviews; track $index) {
-                    <span class="index-dot"></span>
+                    <span class="index-dot" [ngClass]="$index === 1 ? 'index-dot-active' : ''"></span>
                 }
                 <div class="icon-wrapper">
                     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">

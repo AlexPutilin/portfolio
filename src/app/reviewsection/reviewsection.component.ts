@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { NgClass } from "@angular/common";
 
 @Component({
   selector: 'app-reviewsection',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './reviewsection.component.html',
   styleUrl: './reviewsection.component.scss'
 })

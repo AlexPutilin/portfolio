@@ -21,17 +21,11 @@ section {
     position: relative;
     overflow: hidden;
     @include flex($jc: center, $gap: 64px);
-    .quotes {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 340px;
-    }
 }
 
 .diashow-frame::before,
 .diashow-frame::after {
-    width: 200px;
+    width: min(200px, 10%);
     height: 100%;
     position: absolute;
     top: 0;
@@ -42,6 +36,7 @@ section {
 .diashow-frame::before {
   left: 0;
   background: linear-gradient(to right, var(--color-bg), transparent);
+  z-index: 1px;
 }
 
 .diashow-frame::after {
@@ -50,16 +45,19 @@ section {
 }
 
 .review-box {
+    z-index: -1;
     width: 100%;
     max-width: 700px;
     height: 100%;
     padding: 48px;
+    position: relative;
     @include flex(column, center, space-between);
     border-radius: 24px;
     border: 2px solid var(--color-main);
     background-color: var(--color-secondary-passive);
     flex-shrink: 0;
     font-size: 24px;
+    transform: scale(0.95);
     >p {font-size: 24px;}
     >div {
         width: 100%;
@@ -69,6 +67,23 @@ section {
             flex: 1;
             background-color: var(--text-base);
         }
+    }
+    .quotes {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        translate: 0% -50%;
+        opacity: 0;
+        transition: 0.2s opacity ease-in-out;
+    }
+}
+
+.preview-active {
+    background-color: var(--color-secondary-active);
+    transform: scale(1);
+    .quotes {
+        opacity: 1;
     }
 }
 
@@ -87,8 +102,13 @@ nav {
     cursor: pointer;
     &:hover {
         background-color: var(--color-main);
-        transform: scale(1.2);
+        transform: scale(1.4);
     }
+}
+
+.index-dot-active {
+    background-color: var(--color-main);
+    transform: scale(1.4);
 }
 
 .icon-wrapper {
@@ -102,5 +122,59 @@ nav {
     }
     &:hover {
         color: var(--color-main);
+    }
+}
+
+@media (max-width: 992px) {
+    .content {
+        margin-bottom: 64px;
+    }
+    .diashow-frame {
+        width: 100%;
+        height: 400px;
+        padding-inline: 0px;
+        gap: 32px;
+    }
+    .review-box {
+        max-width: 500px;
+        padding: 32px;
+        font-size: 20px;
+        >p {font-size: 20px;}
+        .quotes {
+            width: 56px;
+            height: auto;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .diashow-frame::after,
+    .diashow-frame::before {
+        width: 32px;
+    }
+}
+
+@media (max-width: 576px) {
+    .diashow-frame {
+        height: 350px;
+        padding-block: 16px;
+    }
+    .diashow-frame::after,
+    .diashow-frame::before {
+        display: none;
+    }
+    .review-box {
+        padding: 24px;
+        >p {
+            height: 100%;
+            align-content: center;
+        }
+    }
+}
+
+@media (max-width: 350px) {
+    .review-box {
+        font-size: 16px;
+        >p {font-size: 16px;}
     }
 }

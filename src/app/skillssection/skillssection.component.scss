@@ -168,6 +168,7 @@ section {
 @media (max-width: 1200px) {
     .content {
         @include flex(column, center);
+        margin-bottom: 100px;
     }
     .skill-set {
         max-width: 520px;

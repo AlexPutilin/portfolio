@@ -18,7 +18,6 @@ section {
     width: 100%;
     height: 400px;
     position: relative;
-    // overflow-x: hidden;
 }
 
 .diashow-frame::before,
@@ -48,6 +47,8 @@ section {
     padding-block: 32px;
     overflow-x: auto;
     @include flex($gap: 64px);
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 .diashow::-webkit-scrollbar {

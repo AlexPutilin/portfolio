@@ -1,0 +1,33 @@
+<section>
+    <div class="content-limit">
+        <div class="content">
+            <div>
+                <div class="contact-info">
+                    <p class="subtitle">Contact me</p>
+                    <h3 class="categorie">Lets's work together</h3>
+                    <p>
+                        <span class="subtitle"><b>Got a problem to solve?</b></span>
+                    </p>
+                    <p>
+                        Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. 
+                    </p>
+                    <p>
+                        <span>Need a web developer? </span>
+                        <span style="color: var(--color-main)">Let's talk!</span>
+                    </p>
+                </div>
+                <div class="contact-form">
+                    <form action="">
+                        <app-inputs inputId="input-name" placeholder="Your name goes here">What's your name?</app-inputs>
+                        <app-inputs inputId="input-email" placeholder="youemail@email.com">What's your email?</app-inputs>
+                        <app-inputs inputId="input-info" placeholder="Hello Alex, I am interested in...">How can I help you?</app-inputs>
+                        <app-checkbox>I've read the <a style="color: var(--color-main); text-decoration: none;" href="">privacy policy</a> and agree to the processing of my data as outlined.</app-checkbox>
+                        <div>
+                            <app-button [disabled]="!formIsValid">Say Hello</app-button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

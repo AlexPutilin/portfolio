@@ -1,0 +1,33 @@
+@use '../../styles.scss' as *;
+
+section {
+    width: 100%;
+    padding-inline: min(64px, 5%);
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: 100%;
+    margin-bottom: 160px;
+    @include flex(column, center, center);
+    >div {
+        @include flex($gap: 64px);
+    }
+}
+
+.contact-info {
+    @include flex(column, $gap: 24px);
+    flex: 1;
+    .subtitle {
+        margin: 0;
+    }
+}
+
+.contact-form {
+    flex: 1;
+    border-top: 1px solid var(--color-main);
+    div {
+        text-align: center;
+    }
+}

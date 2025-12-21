@@ -3,16 +3,18 @@
         <div class="content">
             <p class="subtitle">What my colleagues say about me</p>
             <div class="diashow-frame">
-                @for (review of reviews; track $index) {
-                    <div class="review-box" [ngClass]="$index === 1 ? 'preview-active' : ''">
-                        <img class="quotes" src="./imgs/quotes.png">
-                        <p>{{reviews[$index].review}}</p>
-                        <div>
-                            <span class="line"></span>
-                            <span>{{reviews[$index].name}}</span>
+                <div class="diashow">
+                    @for (review of reviews; track $index) {
+                        <div class="review-box" [ngClass]="$index === 1 ? 'preview-active' : ''">
+                            <img class="quotes" src="./imgs/quotes.png">
+                            <p>{{reviews[$index].review}}</p>
+                            <div>
+                                <span class="line"></span>
+                                <span>{{reviews[$index].name}}</span>
+                            </div>
                         </div>
-                    </div>
-                }
+                    }
+                </div>
             </div>
             <nav>
                 <div class="icon-wrapper">

@@ -35,10 +35,11 @@ button {
         animation: 1.5s rotate-border linear infinite
     }
     &:disabled {
-        color: var(--text-disabled-main);
-        background-color: var(--color-disabled);
-        box-shadow: none;
+        color: var(--color-disabled);
         cursor: default;
+        &::before, &::after {
+            background: var(--color-disabled);
+        }
     }
 }
 

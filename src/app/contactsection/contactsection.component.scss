@@ -17,6 +17,7 @@ section {
 }
 
 .contact-info {
+    width: 100%;
     @include flex(column, $gap: 24px);
     flex: 1;
     .subtitle {
@@ -25,9 +26,19 @@ section {
 }
 
 .contact-form {
+    width: 100%;
     flex: 1;
     border-top: 1px solid var(--color-main);
     div {
         text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .content {
+        margin-bottom: 100px;
+        > div {
+            @include flex(column, center, center, 64px)
+        }
     }
 }

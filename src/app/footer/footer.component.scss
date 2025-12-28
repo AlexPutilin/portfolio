@@ -47,6 +47,7 @@ nav {
     @include flex($ai: center, $gap: 4px);
     cursor: pointer;
     > a {
+        font-size: 20px;
         color: var(--text-base);
         text-decoration: none;
         transition: color 125ms ease-in-out;
@@ -71,15 +72,6 @@ nav {
 }
 
 @media (max-width: 768px) {
-    .logo {
-        >span {font-size: 24px}
-        >div {font-size: 20px}
-    }
-
-    .company-info {
-        >span {font-size: 16px}
-    }
-
     .content-limit {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -107,5 +99,11 @@ nav {
 }
 
 @media (max-width: 476px) {
+    .logo {
+        >span {font-size: 24px}
+        >div {font-size: 20px}
+    }
+    .company-info > span {font-size: 16px}
     .copyright {font-size: 20px}
+    .link-wrapper a {font-size: 16px}
 }

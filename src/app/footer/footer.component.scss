@@ -1,0 +1,111 @@
+@use '../../styles.scss' as *;
+
+footer {
+    width: 100%;
+    padding-inline: min(64px, 5%);
+    padding-bottom: 64px;
+    @include flex($jc: center);
+}
+
+.content-limit {
+    @include flex($ai: center, $jc: space-between);
+}
+
+.company-info {
+    @include flex(column, $gap: 12px);
+    >span {
+        font-size: 20px;
+    }
+}
+
+.logo {
+    @include flex($ai: center);
+    cursor: pointer;
+    >span {
+        writing-mode: sideways-lr;
+        font-size: 32px;
+        color: var(--color-main);
+        font-weight: bold;
+    }
+    >div {
+        @include flex(column);
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+.copyright {
+    color: var(--color-main);
+    font-size: 24px;
+}
+
+nav {
+    @include flex(column, $gap: 8px);
+}
+
+.link-wrapper {
+    @include flex($ai: center, $gap: 4px);
+    cursor: pointer;
+    > a {
+        color: var(--text-base);
+        text-decoration: none;
+        transition: color 125ms ease-in-out;
+    }
+    >span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--color-main);
+        opacity: 0;
+        transition: opacity 125ms ease-in-out;
+    }
+    &:hover {
+        color: var(--color-main);
+        >span {
+            opacity: 1;
+        }
+        >a {
+            color: var(--color-main);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .logo {
+        >span {font-size: 24px}
+        >div {font-size: 20px}
+    }
+
+    .company-info {
+        >span {font-size: 16px}
+    }
+
+    .content-limit {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "left nav"
+            "copyright copyright";
+        row-gap: 40px;
+        align-items: center;
+    }
+
+    .content-limit > div {
+        grid-area: left;
+    }
+
+    .content-limit nav {
+        grid-area: nav;
+        justify-self: end;
+    }
+
+    .content-limit .copyright {
+        grid-area: copyright;
+        text-align: center;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 476px) {
+    .copyright {font-size: 20px}
+}

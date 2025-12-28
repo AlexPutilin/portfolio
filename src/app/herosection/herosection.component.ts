@@ -1,11 +1,12 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../ui/buttons/button.component';
+import { CarouselComponent } from '../ui/carousel/carousel.component';
 
 
 @Component({
   selector: 'app-herosection',
-  imports: [ButtonComponent, CommonModule],
+  imports: [ButtonComponent, CommonModule, CarouselComponent],
   templateUrl: './herosection.component.html',
   styleUrl: './herosection.component.scss'
 })

@@ -1,0 +1,27 @@
+@use '../../../styles.scss' as *;
+
+
+a {
+    @include flex($ai: center);
+    text-decoration: none;
+    color: var(--text-base);
+    cursor: pointer;
+    >span {
+        writing-mode: sideways-lr;
+        font-size: 32px;
+        color: var(--color-main);
+        font-weight: bold;
+    }
+    >div {
+        @include flex(column);
+        font-size: 24px;
+        font-weight: bold;
+    }
+}
+
+@media (max-width: 476px) {
+    a {
+        >span {font-size: 24px}
+        >div {font-size: 20px}
+    }
+}

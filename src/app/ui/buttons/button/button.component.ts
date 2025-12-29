@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-button',
@@ -11,4 +12,6 @@ export class ButtonComponent {
   @Input() type: 'button' | 'submit' | 'reset' = 'button';
   @Input() variant: 'primary' | 'secondary' = 'primary';
   @Input() disabled: boolean = false;
+  @Input() href?: string;
+  @Input() target?: '_self' | '_blank' = '_self';
 }

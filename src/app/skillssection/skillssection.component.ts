@@ -1,6 +1,6 @@
 import { afterNextRender, Component, ElementRef, EventEmitter, Output, QueryList, ViewChild, ViewChildren } from '@angular/core';
-import { SkillboxComponent } from '../skillbox/skillbox.component';
-import { ButtonComponent } from '../ui/buttons/button.component';
+import { ButtonComponent } from '../ui/buttons/button/button.component';
+import { SkillboxComponent } from './skillbox/skillbox.component';
 
 @Component({
   selector: 'app-skillssection',

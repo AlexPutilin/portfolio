@@ -4,7 +4,8 @@ import { afterNextRender, Component, ElementRef, ViewChild } from '@angular/core
   selector: 'app-aboutsection',
   imports: [],
   templateUrl: './aboutsection.component.html',
-  styleUrl: './aboutsection.component.scss'
+  styleUrl: './aboutsection.component.scss',
+  standalone: true
 })
 export class AboutsectionComponent {
   constructor() {

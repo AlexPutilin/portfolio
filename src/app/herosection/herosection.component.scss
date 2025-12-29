@@ -44,36 +44,6 @@ section {
     }
 }
 
-.link-icon {
-    color: var(--color-main);
-    transition: color 125ms ease-in-out;
-    @include flex($ai: center, $gap: 4px);
-    cursor: pointer;
-    >span {
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: var(--color-main);
-        opacity: 0;
-        transition: opacity 125ms ease-in-out;
-    }
-    &:hover {
-        color: var(--text-base);
-        >span {
-            opacity: 1;
-        }
-    }
-}
-
-.icon-wrapper {
-    width: 40px;
-    height: 40px;
-    svg {   
-        width: 100%;
-        height: 100%;
-    }
-}
-
 .btn-scroll {
     width: 40px;
     height: 64px;
@@ -85,13 +55,14 @@ section {
     >.icon-wrapper {
         width: 16px;
         height: 24px;
-        transition: all 125ms ease-in-out;
+        animation: bounce 1s linear infinite;
     }
-    &:hover {
-        >.icon-wrapper {
-            transform: translateY(8px);
-        }
-    }
+}
+
+@keyframes bounce {
+    0% {transform: translateY(-4px)}
+    50% {transform: translateY(4px)}
+    100% {transform: translateY(-4px)}
 }
 
 @media (max-width: 768px) {

@@ -1,0 +1,33 @@
+.link-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    > a {
+        font-size: 20px;
+        color: var(--text-base);
+        text-decoration: none;
+        transition: color 125ms ease-in-out;
+    }
+    >span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: var(--color-main);
+        opacity: 0;
+        transition: opacity 125ms ease-in-out;
+    }
+    &:hover {
+        color: var(--color-main);
+        >span {
+            opacity: 1;
+        }
+        >a {
+            color: var(--color-main);
+        }
+    }
+}
+
+@media (max-width: 476px) {
+    .link-wrapper a {font-size: 16px}
+}

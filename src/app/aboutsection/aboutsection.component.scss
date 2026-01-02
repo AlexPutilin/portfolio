@@ -18,16 +18,11 @@ section {
     width: 640px;
     height: 640px;
     align-self: start;
-    background: url('/imgs/Shadow-Lines.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     border-radius: 32px;
     >.img-wrapper {
         width: 640px;
         height: 640px;
         border-radius: 32px;
-        background-color: #2a2a2a;
         overflow: hidden;
         transition: all 125ms ease-in-out;
         >img {
@@ -35,9 +30,28 @@ section {
             height: 100%;
             display: block;
             object-fit: cover;
+            z-index: 1;
         }
     }
+    >.profile-bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 32px;
+        background: url('/imgs/Shadow-Lines.svg');
+        background-position: center;
+        background-size: cover;
+        transition: transform 125ms ease-in-out;
+        z-index: -1;
+    }
+    &:hover >.profile-bg {
+        transform: translate(-20px, 20px);
+    }
 }
+
+
 
 .about-me {
     width: 640px;
@@ -117,16 +131,23 @@ section {
     .profile {
         width: 100%;
         height: auto;
+        border-radius: 24px;
         >.img-wrapper {
             width: 100%;
             height: auto;
+            border-radius: 24px;
             aspect-ratio: 1/1;
+        }
+        >.profile-bg {border-radius: 24px}
+        &:hover >.profile-bg {
+            transform: translate(-10px, 10px);
         }
     }
     .about-me {
         width: 100%;
         height: auto;
         gap: 16px;
+        border-radius: 24px;
     }
      
 }

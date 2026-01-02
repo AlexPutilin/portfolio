@@ -9,8 +9,6 @@ import { SkillboxComponent } from './skillbox/skillbox.component';
   styleUrl: './skillssection.component.scss'
 })
 export class SkillssectionComponent {
-  @Output() nextSection = new EventEmitter();
-
   skillList = [
     'Angular',
     'TypeScript',
@@ -24,32 +22,4 @@ export class SkillssectionComponent {
     'SCRUM',
     'Material-Design',
   ]
-
-  constructor() {
-    afterNextRender(() => {
-      this.initObserver();
-    });
-  }
-
-  @ViewChildren(SkillboxComponent, { read: ElementRef }) skillBoxes!: QueryList<ElementRef>;
-  @ViewChild("skillbox", { read: ElementRef }) skillbox!: ElementRef;
-
-  observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        (entry.target as HTMLElement).classList.add('in-view');
-      }
-    });
-  }, { threshold: 1 });
-
-  private initObserver() {
-    this.skillBoxes.forEach((element, index) => {
-      const skillBox = element.nativeElement;
-      skillBox.style.transitionDelay = `${index * 0.04}s`;
-      this.observer.observe(skillBox);
-    });
-    if (this.skillbox) {
-      this.observer.observe(this.skillbox.nativeElement);
-    }
-  }
 }

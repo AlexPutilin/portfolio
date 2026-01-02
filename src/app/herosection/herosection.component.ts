@@ -12,5 +12,4 @@ import { IconbuttonComponent } from '../ui/buttons/iconbutton/iconbutton.compone
   styleUrl: './herosection.component.scss'
 })
 export class HerosectionComponent {
-  @Output() nextSection = new EventEmitter();
 }

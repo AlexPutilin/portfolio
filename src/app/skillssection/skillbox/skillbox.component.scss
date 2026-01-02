@@ -25,14 +25,3 @@ div {
         }   
     }
 }
-
-:host {
-    opacity: 0;
-    transform: translateX(-32px);
-    transition: all 500ms ease-out;
-}
-
-:host.in-view {
-    opacity: 1;
-    transform: translateX(0);
-}

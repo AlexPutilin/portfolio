@@ -36,7 +36,6 @@ section {
             font-weight: bold;
         }
     }
-
 }
 
 .technologies {
@@ -87,18 +86,6 @@ section {
     // }
 }
 
-.skill-box {
-    opacity: 0;
-    transform: translateX(-32px);
-    transition: all 500ms ease-out;
-    transition-delay: 0.48s;
-}
-
-.in-view {
-    opacity: 1;
-    transform: translateX(0);
-}
-
 .svg-circle {
     transform-origin: center;
     animation: rotate 4s infinite linear;
@@ -145,5 +132,4 @@ section {
         grid-auto-rows: 120px;
         gap: 16px;
     }
-    
 }

@@ -9,7 +9,7 @@ section {
 
 .content {
     width: 100%;
-    margin-bottom: 160px;
+    padding-block: 100px;
     @include flex(column, center, center);
     >div {
         @include flex($gap: 64px);
@@ -35,10 +35,7 @@ section {
 }
 
 @media (max-width: 1200px) {
-    .content {
-        margin-bottom: 100px;
-        > div {
-            @include flex(column, center, center, 64px)
-        }
+    .content > div {
+        @include flex(column, center, center, 64px)
     }
 }

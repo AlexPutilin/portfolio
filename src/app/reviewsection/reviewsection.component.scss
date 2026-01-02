@@ -9,7 +9,7 @@ section {
 
 .content {
     width: 100%;
-    margin-bottom: 160px;
+    padding-block: 100px;
     @include flex(column, center, center);
     >p {text-align: center;}
 }
@@ -136,12 +136,6 @@ nav {
     }
 }
 
-@media (max-width: 1200px) {
-    .content {
-        margin-bottom: 100px;
-    }
-}
-
 @media (max-width: 992px) {
     .diashow {
         gap: 32px;
@@ -166,6 +160,7 @@ nav {
 }
 
 @media (max-width: 576px) {
+    .content {padding-bottom: 0px}
     .diashow-frame {
         height: 350px;
     }

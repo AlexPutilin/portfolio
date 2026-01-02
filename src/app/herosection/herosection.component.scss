@@ -5,7 +5,8 @@ section {
     padding-inline: min(64px, 5%);
     display: flex;
     justify-content: center;
-    background: linear-gradient(25deg, var(--color-bg) 60%, var(--color-secondary-passive));
+    background: url('/imgs/Background_1.svg');
+    background-size: cover;
 }
 
 .content {

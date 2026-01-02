@@ -9,7 +9,7 @@ section {
 
 .content {
     width: 100%;
-    margin-bottom: 160px;
+    padding-block: 100px;
     > div {
         width: 100%;
         height: 100%;
@@ -123,12 +123,7 @@ section {
 
 @media (max-width: 1200px) {
     .preview-container {min-width: 300px}
-    .content {
-        margin-bottom: 100px;
-        > div {
-            gap: 32px;
-        }
-    }
+    .content > div {gap: 32px}
 }
 
 @media (max-width: 992px) {
@@ -149,6 +144,7 @@ section {
 }
 
 @media (max-width: 576px) {
+    .content {padding-bottom: 0px}
     .project-list > div {
         height: 100px;
         padding-inline: 16px;

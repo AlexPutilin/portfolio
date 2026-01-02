@@ -10,22 +10,14 @@ section {
 .content {
     height: 100vh;
     width: 100%;
+    padding-block: 100px;
     @include flex($jc: space-between, $ai: center);
-    >div {
-        height: 100%;
-        padding-block: 160px;
-    }
-    >:nth-child(1) {
-        @include flex($ai: start)
-    }
-    >:nth-child(2) {
-        @include flex(column, start, end);
-    }
 }
 
 .profile {
     width: 640px;
     height: 640px;
+    align-self: start;
     background: url('/imgs/Shadow-Lines.svg');
     background-size: cover;
     background-position: center;
@@ -82,6 +74,7 @@ section {
 }
 
 .about-me-wrapper {
+    align-self: end;
     opacity: 0;
     transform: translateX(64px);
     transition: all 500ms ease-out;
@@ -95,11 +88,6 @@ section {
 
 
 @media (max-width: 1500px) {
-    .content {
-        >div {
-            padding-bottom: 100px;
-        }
-    }
     .profile {
         width: 520px;
         height: 520px;
@@ -108,7 +96,6 @@ section {
             height: 520px;
         }
     }
-    
     .about-me {
         width: 520px;
         height: auto;
@@ -120,14 +107,13 @@ section {
     .content {
         height: auto;
         @include flex(column, center, start, 40px);
-        padding-block: 100px;
-        >div {
-            padding-block: 0px;
-        }
     }
+    .profile {align-self: center}
+    .about-me-wrapper {align-self: center}
 }
 
 @media (max-width: 576px) {
+    .content {padding-bottom: 0px}
     .profile {
         width: 100%;
         height: auto;

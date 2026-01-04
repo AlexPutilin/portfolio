@@ -42,12 +42,51 @@ section {
     width: 100%;
     max-width: 640px;
     margin-top: 62px;
+    position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-auto-rows: 120px;
     justify-items: center;
     align-items: center;
     gap: 24px;
+}
+
+.infobox {
+    width: 220px;
+    padding: 8px;
+    position: absolute;
+    right: 0;
+    bottom: 140px;
+    border-radius: 16px;
+    border: 2px solid var(--color-main);
+    background-color: #443B1B;
+    opacity: 0;
+    transition: opacity 125ms ease-in-out;
+    @include flex(column, center, center, 16px);
+    p {
+        font-size: 16px;
+        text-align: center;
+    }
+    >div {
+        @include flex($gap: 16px);
+        >div {
+            @include flex(column, center, center);
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
+    }
+}
+
+.infobox::after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 55%;
+    border-width: 20px;
+    border-style: solid;
+    border-color: var(--color-main) transparent transparent transparent;
 }
 
 .skill-box {
@@ -81,9 +120,9 @@ section {
             color: var(--color-main);
         }
     }
-    // &:hover + .infobox {
-    //     opacity: 1;
-    // }
+    &:hover + .infobox {
+        opacity: 1;
+    }
 }
 
 .svg-circle {

@@ -1,0 +1,51 @@
+:host {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+    position: relative;
+    color: var(--text-base);
+    .icon-wrapper {
+        width: 48px;
+        height: 48px;
+        >svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &:hover {
+        color: var(--color-main);
+    }
+}
+
+.overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #00000048;
+    z-index: 1000;
+}
+
+.menu {
+    padding: 24px 48px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    border-radius: 24px;
+    border: 2px solid var(--color-main);
+    background: url('/imgs/Background_1.svg');
+    background-size: cover;
+    z-index: 1001;
+}
+
+@media (max-width: 800px) {
+    :host {display: block}
+}

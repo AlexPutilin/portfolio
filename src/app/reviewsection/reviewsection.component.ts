@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-reviewsection',
@@ -9,7 +9,7 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 export class ReviewsectionComponent {
   @ViewChild('diashow') diashow!: ElementRef<HTMLDivElement>;
   currentIndex: number = 0;
-  transform = 'translateX(0px)';
+  transform = 'translateX(-0px)';
 
   reviews = [
     {

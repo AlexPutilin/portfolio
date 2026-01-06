@@ -2,11 +2,11 @@
     <div class="content-limit">
         <nav>
             <div class="switch-wrapper">
-                <input id="DE" type="radio" name="language" checked>
+                <input id="DE" type="radio" name="language-desktop" value="DE" [checked]="language === 'DE'" (change)="language = 'DE'">
                 <label class="switch" for="DE">DE</label>
-                <input id="EN" type="radio" name="language">
+                <input id="EN" type="radio" name="language-desktop" value="EN" [checked]="language === 'EN'" (change)="language = 'EN'">
                 <label class="switch" for="EN">EN</label>
-                <span class="switch-checked"></span>
+                <span class="toggle"></span>
             </div>
             <div class="nav-link">
                 <a href="#about-section">About me</a>
@@ -26,5 +26,30 @@
             </div>
         </nav>
         <app-logo></app-logo>
+        <app-menu [menuOpen]="menuOpen" (open)="openMenu()" (close)="closeMenu()">
+            <div class="nav-link">
+                <a href="#about-section" (click)="closeMenu()">About me</a>
+                <span></span>
+            </div>
+            <div class="nav-link">
+                <a href="#skills-section" (click)="closeMenu()">Skills</a>
+                <span></span>
+            </div>
+            <div class="nav-link">
+                <a href="#projects-section" (click)="closeMenu()">Projects</a>
+                <span></span>
+            </div>
+            <div class="nav-link">
+                <a href="#contact-section" (click)="closeMenu()">Contact</a>
+                <span></span>
+            </div>
+            <div class="switch-wrapper">
+                <input id="DE-menu" type="radio" name="language-mobile" value="DE" [checked]="language === 'DE'" (change)="language = 'DE'">
+                <label class="switch" for="DE-menu">DE</label>
+                <input id="EN-menu" type="radio" name="language-mobile" value="EN" [checked]="language === 'EN'" (change)="language = 'EN'">
+                <label class="switch" for="EN-menu">EN</label>
+                <span class="toggle"></span>
+            </div>
+        </app-menu>
     </div>
 </header>

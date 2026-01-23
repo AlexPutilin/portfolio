@@ -59,6 +59,10 @@ h2 {
     text-align: center;
 }
 
+h3 {
+    font-size: 32px;
+}
+
 .categorie {
     font-size: 64px;
     font-family: 'Fira Code', 'Segoe UI', sans-serif;
@@ -90,11 +94,13 @@ p {
 @media (max-width: 992px) {
     h1 {font-size: 72px}
     h2 {font-size: 40px}
+    h3 {font-size: 28px}
 }
 
 @media (max-width: 768px) {
     h1 {font-size: 56px}
     h2 {font-size: 32px}
+    h3 {font-size: 20px}
     .categorie {font-size: 48px}
     .subtitle {margin-bottom: 16px}
 }
@@ -112,5 +118,6 @@ p {
 @media (max-width: 476px) {
     h1 {font-size: 32px}
     h2 {font-size: 20px}
+    h3 {font-size: 16px}
     .subtitle {font-size: 24px}
 }

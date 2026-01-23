@@ -6,7 +6,7 @@
             <p>Explore a section of my work here - Interact with projects to see my skills in action.</p>
             <div>
                 <div class="project-list">
-                    <a href="https://alexander-putilin.developerakademie.net/modul9/pokedex/html/index.html" target="_blank">
+                    <a (click)="openModal(0)">
                         <div class="project-list-element" (mouseenter)="hoverIndex = 1" (mouseleave)="hoverIndex = null">
                             <div>
                                 <span>Pokedex</span>
@@ -32,7 +32,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://join-459.developerakademie.net/join/index.html" target="_blank">
+                    <a (click)="openModal(1)">
                         <div class="project-list-element" (mouseenter)="hoverIndex = 2" (mouseleave)="hoverIndex = null">
                             <div>
                                 <span>Join</span>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                     </a>
-                    <a href="https://alexander-putilin.developerakademie.net/sharkie/index.html" target="_blank">
+                    <a (click)="openModal(2)">
                         <div class="project-list-element" (mouseenter)="hoverIndex = 3" (mouseleave)="hoverIndex = null">
                             <div>
                                 <span>Sharkie</span>
@@ -104,4 +104,8 @@
             </div>
         </div>
     </div>
+
+    @if (isModalOpen) {
+        <app-projectoverview [projectIndex]="projectIndex" (close)="closeModal()"></app-projectoverview>
+    }
 </section>

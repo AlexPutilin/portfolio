@@ -61,6 +61,7 @@ section {
     border: 2px solid var(--color-main);
     background-color: #443B1B;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 125ms ease-in-out;
     @include flex(column, center, center, 16px);
     p {

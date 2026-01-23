@@ -6,9 +6,10 @@
 
 .btn {
     --border-width: 2px;
-    display: block;
     padding: 16px 28px;
     position: relative;
+    display: flex;
+    align-items: center;
     font-size: 24px;
     color: var(--text-base);
     border-radius: 28px;
@@ -35,6 +36,9 @@
     &:hover::before, &:hover::after {
         background: conic-gradient(from var(--angle), transparent 30%, var(--color-main), transparent);
         animation: 1.5s rotate-border linear infinite
+    }
+    &:hover {
+        color: var(--color-main);
     }
     &:disabled {
         color: var(--color-disabled);
@@ -70,6 +74,20 @@
 }
 
 @media (max-width: 476px) {
+    .btn {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+    .btn {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}
+
+@media (max-height: 476px) and (orientation: landscape) {
     .btn {
         font-size: 16px;
         padding: 8px 12px;

@@ -17,13 +17,80 @@
                     </p>
                 </div>
                 <div class="contact-form">
-                    <form action="">
-                        <app-inputs inputId="input-name" placeholder="Your name goes here">What's your name?</app-inputs>
-                        <app-inputs inputId="input-email" placeholder="youemail@email.com">What's your email?</app-inputs>
-                        <app-inputs inputId="input-info" placeholder="Hello Alex, I am interested in...">How can I help you?</app-inputs>
-                        <app-checkbox>I've read the <a style="color: var(--color-main); text-decoration: none;" href="">privacy policy</a> and agree to the processing of my data as outlined.</app-checkbox>
-                        <div>
-                            <app-button [disabled]="!formIsValid">Say Hello</app-button>
+                    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+                        <div class="input-wrapper">
+                            <label for="name">What's your name?</label>
+                            <input 
+                                [(ngModel)]="contactData.name" 
+                                type="text" 
+                                id="name" 
+                                name="name"
+                                #nameCtrl="ngModel"
+                                placeholder="Your name goes here" 
+                                autocomplete="off" 
+                                required>
+                            @if (nameCtrl.invalid && hasSubmitted) {
+                                <span class="error-message">Please enter your name.</span>
+                            }
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="email">What's your email?</label>
+                            <input
+                                [(ngModel)]="contactData.email"
+                                type="email" 
+                                id="email" 
+                                name="email"
+                                #emailCtrl="ngModel"
+                                placeholder="youemail@email.com"
+                                autocomplete="off"
+                                required
+                                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                            @if (emailCtrl.errors?.['required'] && hasSubmitted) {
+                                <span class="error-message">Email is required.</span>
+                            }
+                            @else if (emailCtrl.errors?.['pattern'] && hasSubmitted) {
+                                <span class="error-message">Please enter a valid email.</span>
+                            }
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="message">How can I help you?</label>
+                            <input 
+                                [(ngModel)]="contactData.message"
+                                type="text" 
+                                id="message" 
+                                name="message" 
+                                #messageCtrl="ngModel"
+                                placeholder="Hello Alex, I am interested in..."
+                                autocomplete="off"
+                                minlength="10"
+                                required>
+                            @if (messageCtrl.errors?.['required'] && hasSubmitted) {
+                                <span class="error-message">Please enter a message.</span>
+                            }
+                            @else if (messageCtrl.errors?.['minlength'] && hasSubmitted) {
+                                <span class="error-message">Message must be at least 10 characters long.</span>
+                            }
+                        </div>
+                        <div class="checkbox-container">
+                            <div class="checkbox">
+                                <div class="checkbox-wrapper">
+                                    <label>
+                                        <input type="checkbox" name="privacyAccepted" [(ngModel)]="privacyAccepted">
+                                        <div class="icon-wrapper">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="currentColor">
+                                                <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"/>
+                                            </svg>
+                                        </div>
+                                    </label>
+                                </div>
+                                <span>I've read the <a style="color: var(--color-main); text-decoration: none;" href="">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                            </div>
+                            @if (hasSubmitted && !privacyAccepted) {
+                                <span class="error-message">Please accept the privacy policy.</span>
+                            }
+                        </div>
+                        <div class="submit-container">
+                            <app-button type="submit" [disabled]="!privacyAccepted">Say Hello</app-button>
                         </div>
                     </form>
                 </div>

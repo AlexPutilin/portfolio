@@ -40,7 +40,7 @@
     &:hover {
         color: var(--color-main);
     }
-    &:disabled {
+    &.disabled {
         color: var(--color-disabled);
         cursor: default;
         &::before, &::after {

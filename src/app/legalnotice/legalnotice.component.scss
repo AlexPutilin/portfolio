@@ -17,7 +17,6 @@ section {
     @include flex(column);
     >h2 {
         width: 100%;
-        margin-bottom: 40px;
         color: var(--color-main);
         text-align: center;
     }
@@ -25,8 +24,14 @@ section {
         margin-bottom: 8px;
         color: var(--color-main);
     }
-    >p {
+    >p, >ul, >h2 {
         margin-bottom: 40px;
+    }
+    li::marker {
+        color: var(--color-main);
+    }
+    ul {
+        padding-left: 16px;
     }
 }
 
@@ -34,10 +39,9 @@ section {
     .content {
         padding-top: 100px;
         >h2 {
-            margin-bottom: 24px;
             text-align: start;
         }
-        >p {
+        >h2, >p, >ul {
             margin-bottom: 24px;
         }
     }

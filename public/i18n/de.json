@@ -1,0 +1,120 @@
+{
+    "HEADER": {
+        "ABOUT_ME_LABEL": "Über mich",
+        "SKILLS_LABEL": "Skills",
+        "PROJECTS_LABEL": "Projekte",
+        "CONTACT_LABEL": "Kontakt"
+    },
+    "HERO": {
+        "BUTTON_WORK": "Projekte",
+        "BUTTON_CONTACT": "Kontakt",
+        "BANNER": {
+            "LABEL_1": "Offen für Neues",
+            "LABEL_2": "Remote verfügbar",
+            "LABEL_3": "Web-Entwickler",
+            "LABEL_4": "Sitz in Hannover"
+        }
+    },
+    "ABOUT": {
+        "SUBTITLE": "Wer ich bin",
+        "TITLE": "Über mich",
+        "P": "Hallo. Ich bin Alex, ein strukturierter und detailorientierter Webentwickler in Ausbildung mit einer großen Leidenschaft für die Entwicklung sinnvoller und benutzerorientierter Anwendungen.",
+        "INFO_1": "Ich bin in Hannover ansässig und stehe auch für Remote-Arbeit zur Verfügung.",
+        "INFO_2": "Ich habe Freude daran, Ideen in reale Projekte umzusetzen und meine Fähigkeiten durch praktisches Lernen stetig zu verbessern. Besonders begeistert mich die Entwicklung moderner Weblösungen und die Erforschung neuer Technologien.",
+        "INFO_3": "Wenn ich vor einer Herausforderung stehe, analysiere ich sie gründlich und suche nach verschiedenen Lösungsansätzen, bis ich die effektivste gefunden habe. Ich bleibe hartnäckig, auch wenn es schwierig wird, und lerne aus jedem Schritt. Wenn Du jemanden suchst, der neugierig, zuverlässig und motiviert ist, an jeder Herausforderung zu wachsen, bin ich die richtige Person für die Zusammenarbeit."
+    },
+    "SKILLS": {
+        "SUBTITLE": "Technologien",
+        "TITLE": "Skill Set",
+        "BUTTON": "Let's Talk",
+        "P_1": "Als Junior-Frontend-Entwickler habe ich bereits in verschiedenen Projekten Erfahrung gesammelt und dabei responsive und intuitive Benutzeroberflächen entwickelt. Mir macht es Spaß, Ideen in funktionale und gut strukturierte Lösungen umzusetzen und meine Arbeitsweise stetig zu verbessern. Ich bin immer offen für neue Technologien und erweitere aktuell meine Kenntnisse im Backend-Bereich, um mich zum Full-Stack-Entwickler weiterzuentwickeln.",
+        "P_2": "Nehme gerne Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+        "P_BOLD_1.1": "Du benötigst einen ",
+        "P_BOLD_1.2": "anderen Skill?",
+        "SKILL_BOX": {
+            "LABEL": "am lernen...",
+            "INFO": "Nächster Halt auf meinem Lehrplan: Backend!"
+        }
+    },
+    "PORTFOLIO": {
+        "SUBTITLE": "Portfolio",
+        "TITLE": "Ausgewählte Projekte",
+        "INFO": "Entdecke hier einen Teil meiner Arbeit – interagiere mit Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+        "PROJECT": {
+            "SUBTITLE": "Worum geht es in diesem Projekt?",
+            "INFO_PROJECT_1": "Diese Pokédex-App nutzt die Pokémon REST-API, um auf die gesamte Pokémon-Datenbank zuzugreifen und diese anzuzeigen.",
+            "INFO_PROJECT_2": "Aufgabenverwaltungstool, inspiriert vom Kanban-System. Aufgaben erstellen und organisieren, Benutzer und Kategorien zuweisen.",
+            "INFO_PROJECT_3": "Side-Scroller-Spiel mit objektorientierten Ansatz. Hilf Sharkie im Kampf gegen verschiedene Unterwassertiere.",
+            "BUTTON_NEXT": "Nächstes Projekt"
+        }
+    },
+    "REVIEW": {
+        "SUBTITLE": "Was meine Mitarbeiter über mich sagen",
+        "REVIEW_1": "Die Zusammenarbeit mit Alex war eine tolle Erfahrung – er war stets hilfsbereit und blieb auch bei Herausforderungen hochmotiviert. Seine Beharrlichkeit bei der Suche nach der richtigen Lösung war für das gesamte Team von unschätzbarem Wert.",
+        "REVIEW_2": "Alex hat die Gabe, komplexe Themen einfach und verständlich zu erklären. Dadurch war es viel einfacher, den Projektfortschritt zu verfolgen und als Team effizient voranzukommen.",
+        "REVIEW_3": "Alex behielt stets den Überblick über Aufgaben und Prioritäten, was dem Projekt Klarheit und Struktur verlieh. Dank seiner strukturierten Vorgehensweise verlief die Zusammenarbeit reibungslos und gut koordiniert."
+    },
+    "CONTACT": {
+        "SUBTITLE": "Kontakt",
+        "TITLE": "Lass uns zusammenarbeiten",
+        "P_BOLD": "Gibt es ein Problem zu lösen?",
+        "P_1": "Durch meine strukturierte, und Lösungsorientierte Arbeitsweise finden wir gemeinsam den besten Weg um Deine Idee umzusetzen.",
+        "P_2": "Du benötigst einen Web-Entwickler? ",
+        "SPAN": "Let's talk!",
+        "FORM": {
+            "LABEL_NAME": "Wie lautet dein Name?",
+            "PLACEHOLDER_NAME": "Hier kommt dein Name hin",
+            "REQUIRED_NAME": "Bitte Namen eingeben.",
+            "LABEL_MAIL": "Wie lautet deine Email?",
+            "PLACEHOLDER_MAIL": "yourmail@email.com",
+            "VALID_MAIL": "Bitte eine gültige Email eingeben.",
+            "REQUIRED_MAIL": "E-Mail-Adresse erforderlich.",
+            "LABEL_MESSAGE": "Wie kann ich dir helfen?",
+            "PLACEHOLDER_MESSAGE": "Hallo Alex, ich habe interesse an...",
+            "REQUIRED_MESSAGE": "Bitte Nachricht eingeben.",
+            "LENGTH_MESSAGE": "Mindestens 10 Zeichen.",
+            "LABEL_CHECKBOX_1": "Ich habe die",
+            "LABEL_CHECKBOX_2": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+            "LINK_CHECKBOX": "Datenschutzrichtlinien",
+            "REQUIRED_CHECKBOX": "Bitte bestätige die Datenschutzrichtlinien.",
+            "BUTTON_SUBMIT": "Sag Hallo"
+        }
+    },
+    "FOOTER": {
+        "JOB": "Web-Entwickler",
+        "LOCATION": "Hannover Deutschland",
+        "LINK_NOTICE": "Impressum"
+    },
+    "PRIVACY": {
+        "TITLE": " Datenschutzrichtlinien",
+        "T1": "Allgemeine information",
+        "P1": "Der Schutz Ihrer persönlichen Daten ist mir sehr wichtig. Ich behandle Ihre personenbezogenen Daten vertraulich und in Übereinstimmung mit den gesetzlichen Datenschutzbestimmungen (DSGVO) und dieser Datenschutzerklärung.",
+        "T2": "Erhebung und Verarbeitung personenbezogener Daten",
+        "P2": "Diese Website kann grundsätzlich besucht werden, ohne dass personenbezogene Daten angegeben werden müssen. Personenbezogene Daten werden nur dann erhoben, wenn Sie mir diese freiwillig zur Verfügung stellen.",
+        "T3": "Kontaktformular",
+        "P3": "Wenn Sie mich über das Kontaktformular kontaktieren, werden die von Ihnen angegebenen Informationen (z. B. Name, E-Mail-Adresse und Nachricht) zur Bearbeitung Ihrer Anfrage und für eventuelle Rückfragen gespeichert. Rechtsgrundlage: Art. 6 Abs. 1 lit. b DSGVO (Bearbeitung Ihrer Anfrage). Die Daten werden nicht an Dritte weitergegeben und nur so lange gespeichert, wie es zur Bearbeitung Ihrer Anfrage erforderlich ist.",
+        "T4": "Cookies",
+        "P4": "Diese Website verwendet keine Cookies, die personenbezogene Daten speichern oder zu Analyse- oder Marketingzwecken verwendet werden.",
+        "T5": "Deine Rechte",
+        "P5": "Sie haben jederzeit das Recht, auf Ihre gespeicherten personenbezogenen Daten zuzugreifen, einschließlich Informationen über deren Herkunft, Empfänger und Verarbeitungszweck. Sie haben außerdem das Recht, diese Daten zu berichtigen, deren Verarbeitung einzuschränken, sie zu übertragen, ihren Widerruf zu erklären oder sie zu löschen. Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer Daten gegen geltendes Datenschutzrecht verstößt, können Sie eine Beschwerde bei der zuständigen Aufsichtsbehörde einreichen.",
+        "T6": "Änderungen dieser Datenschutzrichtlinie",
+        "P6": "Ich behalte mir das Recht vor, diese Datenschutzrichtlinie zu ändern, um sie an aktuelle rechtliche Anforderungen oder Änderungen an der Website anzupassen."
+    },
+    "LEGALNOTICE": {
+        "TITLE": "Rechtlicher Hinweis",
+        "T1": "Impressum",
+        "P1": "",
+        "T3": "Annahme der Bedingungen",
+        "P3": "Durch den Zugriff auf und die Nutzung von Portfolio (Produkt) erklären Sie sich mit den folgenden Nutzungsbedingungen sowie allen Richtlinien, Bestimmungen oder Änderungen daran, die Ihnen gegebenenfalls mitgeteilt werden, einverstanden. Wir, die aufgeführten Studierenden, behalten uns das Recht vor, die Nutzungsbedingungen jederzeit und ohne vorherige Ankündigung zu aktualisieren oder zu ändern.",
+        "T4": "Umfang und Eigentum am Produkt",
+        "P4": "Portfolio wurde im Rahmen eines studentischen Gruppenprojekts in einem Webentwicklungs-Bootcamp der Developer Akademie GmbH entwickelt. Es dient ausschließlich Bildungszwecken und ist nicht für den umfassenden privaten und geschäftlichen Gebrauch bestimmt. Daher können wir weder die ständige Verfügbarkeit, Zuverlässigkeit, Genauigkeit noch sonstige Qualitätsmerkmale dieses Produkts garantieren.<br><br>Das Design von Portfolio ist Eigentum der Developer Akademie GmbH. Unerlaubte Nutzung, Vervielfältigung, Änderung, Verbreitung oder Reproduktion des Designs ist strengstens untersagt.",
+        "T5": "Eigentumsrechte",
+        "P5": "Abgesehen vom Design, das der Developer Akademie GmbH gehört, behalten wir, die aufgeführten Studenten, alle Eigentumsrechte an Portfolio, einschließlich aller zugehörigen urheberrechtlich geschützten Materialien, Marken und sonstigen geschützten Informationen.",
+        "T6": "Benutzer des Produkts",
+        "P6": "Portfolio darf ausschließlich für rechtmäßige Zwecke und in Übereinstimmung mit allen geltenden Gesetzen und Bestimmungen genutzt werden. Jegliche Nutzung von Portfolio für illegale Aktivitäten oder zur Belästigung, Schädigung, Bedrohung oder Einschüchterung anderer Personen ist strengstens untersagt. Sie tragen die alleinige Verantwortung für Ihre Interaktionen mit anderen Nutzern von Portfolio.",
+        "T7": "Gewährleistungsausschluss und Haftungsbeschränkung",
+        "P7": "Das Portfolio wird ohne jegliche Gewährleistung, weder ausdrücklich noch stillschweigend, bereitgestellt. Dies schließt insbesondere die Gewährleistung der Handelsüblichkeit, der Eignung für einen bestimmten Zweck und der Nichtverletzung von Rechten Dritter aus. Weder wir, die aufgeführten Studierenden noch die Developer Akademie haften in irgendeinem Fall für direkte, indirekte, zufällige, besondere, Folgeschäden oder Strafschadenersatz, einschließlich, aber nicht beschränkt auf Schäden aus entgangenem Gewinn, Verlust des Firmenwerts, Nutzungsausfall, Datenverlust oder sonstige immaterielle Verluste, selbst wenn wir auf die Möglichkeit solcher Schäden hingewiesen wurden, die aus der Nutzung oder der Leistung des Portfolios entstehen oder damit in Zusammenhang stehen.",
+        "T8": "Entschädigung",
+        "P8": "Sie verpflichten sich, uns, die aufgeführten Studierenden, die Developer Akademie sowie unsere verbundenen Unternehmen, Partner, Führungskräfte, Direktoren, Vertreter und Mitarbeiter von jeglichen Ansprüchen, Forderungen, Verlusten, Schäden, Kosten oder Haftungsansprüchen (einschließlich angemessener Anwaltskosten) freizustellen, zu verteidigen und schadlos zu halten, die aus Ihrer Nutzung des Portfolios und/oder Ihrem Verstoß gegen diese rechtlichen Hinweise entstehen.<br><br>Bei Fragen oder Anmerkungen kontaktieren Sie uns bitte unter alexander.putilin@yahoo.de.<br><br>Datum: 26. Januar 2026"
+    }
+}

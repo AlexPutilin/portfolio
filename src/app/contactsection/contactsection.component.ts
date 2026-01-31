@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { ButtonComponent } from '../ui/buttons/button/button.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contactsection',
-  imports: [ButtonComponent, FormsModule],
+  imports: [ButtonComponent, FormsModule, TranslateModule],
   templateUrl: './contactsection.component.html',
   styleUrl: './contactsection.component.scss',
   standalone: true

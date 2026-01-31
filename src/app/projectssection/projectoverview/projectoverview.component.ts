@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonComponent } from '../../ui/buttons/button/button.component';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-projectoverview',
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, TranslateModule],
   templateUrl: './projectoverview.component.html',
-  styleUrl: './projectoverview.component.scss'
+  styleUrl: './projectoverview.component.scss',
+  standalone: true
 })
 export class ProjectoverviewComponent {
   @Input() projectIndex: number = 0;
@@ -14,7 +16,7 @@ export class ProjectoverviewComponent {
   projects = [
     {
       name: "Pokedex",
-      description: "This Pokedex-App uses the Pokemon REST-API to access and display the entire Pokemon database.",
+      description: 'PORTFOLIO.PROJECT.INFO_PROJECT_1',
       imgUrl: "./imgs/pokedex.jpg",
       techs: ['JavaScript','HTML','CSS','Rest-API'],
       github: "https://github.com/AlexPutilin/Pokedex",
@@ -22,7 +24,7 @@ export class ProjectoverviewComponent {
     },
     {
       name: "Join",
-      description: "Task manager tool inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories",
+      description: 'PORTFOLIO.PROJECT.INFO_PROJECT_2',
       imgUrl: "./imgs/join.jpg",
       techs: ['JavaScript','HTML','CSS','Firebase'],
       github: "https://github.com/AlexPutilin/Join",
@@ -30,7 +32,7 @@ export class ProjectoverviewComponent {
     },
     {
       name: "Sharkie",
-      description: "Side-Scroller game based on object-oriented approach. Help Sharkie to collect coins and potions to fight against different underwater animals.",
+      description: 'PORTFOLIO.PROJECT.INFO_PROJECT_3',
       imgUrl: "./imgs/sharkie.jpg",
       techs: ['JavaScript','HTML','CSS'],
       github: "https://github.com/AlexPutilin/Sharkie",

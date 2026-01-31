@@ -72,7 +72,7 @@ header {
         background-color: var(--color-main);
         transition: transform 125ms ease-out;
     }
-    input[value='EN']:checked ~ .toggle {
+    input[value='en']:checked ~ .toggle {
         transform: translateX(100%);
     }
     input:checked + .switch {

@@ -3,72 +3,70 @@
         <div class="content">
             <div>
                 <div class="contact-info">
-                    <p class="subtitle">Contact me</p>
-                    <h3 class="categorie">Lets's work together</h3>
+                    <p class="subtitle">{{"CONTACT.SUBTITLE" | translate}}</p>
+                    <h3 class="categorie">{{"CONTACT.TITLE" | translate}}</h3>
                     <p>
-                        <span class="subtitle"><b>Got a problem to solve?</b></span>
+                        <span class="subtitle"><b>{{"CONTACT.P_BOLD" | translate}}</b></span>
                     </p>
+                    <p>{{"CONTACT.P_1" | translate}}</p>
                     <p>
-                        Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work. 
-                    </p>
-                    <p>
-                        <span>Need a web developer? </span>
-                        <span style="color: var(--color-main)">Let's talk!</span>
+                        <span>{{"CONTACT.P_2" | translate}}</span>
+                        <span style="color: var(--color-main)">{{"CONTACT.SPAN" | translate}}</span>
                     </p>
                 </div>
                 <div class="contact-form">
                     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
                         <div class="input-wrapper">
-                            <label for="name">What's your name?</label>
+                            <label for="name">{{"CONTACT.FORM.LABEL_NAME" | translate}}</label>
                             <input 
                                 [(ngModel)]="contactData.name" 
                                 type="text" 
                                 id="name" 
                                 name="name"
                                 #nameCtrl="ngModel"
-                                placeholder="Your name goes here" 
+                                placeholder='{{"CONTACT.FORM.PLACEHOLDER_NAME" | translate}}' 
                                 autocomplete="off" 
                                 required>
                             @if (nameCtrl.invalid && hasSubmitted) {
-                                <span class="error-message">Please enter your name.</span>
+                                <span class="error-message">{{"CONTACT.FORM.REQUIRED_NAME" | translate}}</span>
                             }
                         </div>
                         <div class="input-wrapper">
-                            <label for="email">What's your email?</label>
+                            <label for="email">{{"CONTACT.FORM.LABEL_MAIL" | translate}}</label>
                             <input
                                 [(ngModel)]="contactData.email"
                                 type="email" 
                                 id="email" 
                                 name="email"
                                 #emailCtrl="ngModel"
-                                placeholder="youemail@email.com"
+                                placeholder='{{"CONTACT.FORM.PLACEHOLDER_MAIL" | translate}}'
                                 autocomplete="off"
                                 required
                                 pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
                             @if (emailCtrl.errors?.['required'] && hasSubmitted) {
-                                <span class="error-message">Email is required.</span>
+                                <span class="error-message">{{"CONTACT.FORM.REQUIRED_MAIL" | translate}}</span>
                             }
                             @else if (emailCtrl.errors?.['pattern'] && hasSubmitted) {
-                                <span class="error-message">Please enter a valid email.</span>
+                                <span class="error-message">{{"CONTACT.FORM.VALID_MAIL" | translate}}</span>
                             }
                         </div>
                         <div class="input-wrapper">
-                            <label for="message">How can I help you?</label>
+                            <label for="message">{{"CONTACT.FORM.LABEL_MESSAGE" | translate}}</label>
                             <input 
                                 [(ngModel)]="contactData.message"
                                 type="text" 
                                 id="message" 
                                 name="message" 
                                 #messageCtrl="ngModel"
-                                placeholder="Hello Alex, I am interested in..."
+                                placeholder='{{"CONTACT.FORM.PLACEHOLDER_MESSAGE" | translate}}'
                                 autocomplete="off"
                                 minlength="10"
                                 required>
                             @if (messageCtrl.errors?.['required'] && hasSubmitted) {
-                                <span class="error-message">Please enter a message.</span>
+                                <span class="error-message">{{"CONTACT.FORM.REQUIRED_MESSAGE" | translate}}</span>
                             }
                             @else if (messageCtrl.errors?.['minlength'] && hasSubmitted) {
-                                <span class="error-message">Message must be at least 10 characters long.</span>
+                                <span class="error-message">{{"CONTACT.FORM.LENGTH_MESSAGE" | translate}}</span>
                             }
                         </div>
                         <div class="checkbox-container">
@@ -83,14 +81,18 @@
                                         </div>
                                     </label>
                                 </div>
-                                <span>I've read the <a style="color: var(--color-main); text-decoration: none;" href="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                                <span>
+                                    {{"CONTACT.FORM.LABEL_CHECKBOX_1" | translate}}
+                                    <a style="color: var(--color-main); text-decoration: none;" href="/privacy-policy">{{"CONTACT.FORM.LINK_CHECKBOX" | translate}}</a>
+                                    {{"CONTACT.FORM.LABEL_CHECKBOX_2" | translate}}
+                                </span>
                             </div>
                             @if (hasSubmitted && !privacyAccepted) {
-                                <span class="error-message">Please accept the privacy policy.</span>
+                                <span class="error-message">{{"CONTACT.FORM.REQUIRED_CHECKBOX" | translate}}</span>
                             }
                         </div>
                         <div class="submit-container">
-                            <app-button type="submit" [disabled]="!privacyAccepted">Say Hello</app-button>
+                            <app-button type="submit" [disabled]="!privacyAccepted">{{"CONTACT.FORM.BUTTON_SUBMIT" | translate}}</app-button>
                         </div>
                     </form>
                 </div>

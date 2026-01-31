@@ -1,10 +1,12 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-reviewsection',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './reviewsection.component.html',
-  styleUrl: './reviewsection.component.scss'
+  styleUrl: './reviewsection.component.scss',
+  standalone: true
 })
 export class ReviewsectionComponent {
   @ViewChild('diashow') diashow!: ElementRef<HTMLDivElement>;
@@ -14,15 +16,15 @@ export class ReviewsectionComponent {
   reviews = [
     {
       name: "Aslihan E. - Join Project",
-      review: "Working with Alex was a great experience — he was always willing to help and stayed highly motivated when challenges came up. His persistence in finding the right solution made a real difference for the whole team."
+      review: 'REVIEW.REVIEW_1'
     },
     {
       name: "Janine W. - Join Project",
-      review: "Alex has a talent for explaining complex topics in a simple and understandable way. This made it much easier to follow the project’s progress and move forward efficiently as a team."
+      review: 'REVIEW.REVIEW_2'
     },
     {
       name: "Michael Z. - Join Project",
-      review: "Alex consistently kept an overview of tasks and priorities, which brought clarity and structure to the project. Thanks to his organized approach, collaboration felt smooth and well-coordinated."
+      review: 'REVIEW.REVIEW_3'
     },
   ]
 

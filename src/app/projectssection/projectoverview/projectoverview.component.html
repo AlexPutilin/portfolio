@@ -15,8 +15,8 @@
                 <div class="info">
                     <h1>0{{projectIndex + 1}}</h1>
                     <h2>{{projects[projectIndex].name}}</h2>
-                    <h3>What is this project about?</h3>
-                    <p>{{projects[projectIndex].description}}</p>
+                    <h3>{{"PORTFOLIO.PROJECT.SUBTITLE" | translate}}</h3>
+                    <p>{{projects[projectIndex].description | translate}}</p>
                     <div class="techs">
                         @for (tech of projects[projectIndex].techs; track $index) {
                             <div class="tech-label">
@@ -60,7 +60,7 @@
             </div>
 
             <button class="btn-next" (click)="projectIndex = (projectIndex + 1) % projects.length">
-                <span>Next Project</span>
+                <span>{{"PORTFOLIO.PROJECT.BUTTON_NEXT" | translate}}</span>
                 <div class="icon">
                     <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0_3296_3455" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="32" height="32">

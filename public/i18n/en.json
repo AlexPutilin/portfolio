@@ -1,0 +1,122 @@
+{
+    "HEADER": {
+        "ABOUT_ME_LABEL": "About me",
+        "SKILLS_LABEL": "Skills",
+        "PROJECTS_LABEL": "Projects",
+        "CONTACT_LABEL": "Contact"
+    },
+    "HERO": {
+        "BUTTON_WORK": "Check my work",
+        "BUTTON_CONTACT": "Contact me",
+        "BANNER": {
+            "LABEL_1": "Open to work",
+            "LABEL_2": "Remote available",
+            "LABEL_3": "Web Developer",
+            "LABEL_4": "Based in Hanover"
+        }
+    },
+    "ABOUT": {
+        "SUBTITLE": "Who I Am",
+        "TITLE": "About me",
+        "P": "Hi there. I’m Alex, a structured and detail-oriented web developer in training with a strong passion for creating meaningful and user-focused applications.",
+        "INFO_1": "I’m based in Hanover and am also open to remote work.",
+        "INFO_2": "I enjoy turning ideas into real projects and continuously strengthening my skills through hands-on learning. I’m especially passionate about building modern web solutions and exploring new technologies.",
+        "INFO_3": "When I approach a challenge, I like to break it down analytically and explore different solutions until I find the most effective one. I stay persistent when things get tricky and make sure to learn from every step along the way. If you’re looking for someone who’s curious, reliable, and motivated to grow with every challenge, I’m the right person to work with."
+    },
+    "SKILLS": {
+        "SUBTITLE": "Technologies",
+        "TITLE": "Skill Set",
+        "BUTTON": "Let's Talk",
+        "P_1": "As a junior front-end developer, I’ve gained experience working on a variety of projects where I built responsive and intuitive user interfaces. I enjoy turning ideas into functional, well-structured solutions and consistently improving the way I work. I’m always open to learning new technologies and am currently expanding my skills into backend development on my path toward becoming a full-stack developer.",
+        "P_2": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+        "P_BOLD_1.1": "You need ",
+        "P_BOLD_1.2": "another Skill?",
+        "SKILL_BOX": {
+            "LABEL": "Continue learning",
+            "INFO": "Next stop on my roadtrip: Backend!"
+        }
+    },
+    "PORTFOLIO": {
+        "SUBTITLE": "Portfolio",
+        "TITLE": "Featured Projects",
+        "INFO": "Explore a section of my work here - Interact with projects to see my skills in action.",
+        "PROJECT": {
+            "SUBTITLE": "What is this project about?",
+            "INFO_PROJECT_1": "This Pokedex-App uses the Pokemon REST-API to access and display the entire Pokemon database.",
+            "INFO_PROJECT_2": "Task manager tool inspired by the Kanban System. Create and organize tasks, assign users and categories.",
+            "INFO_PROJECT_3": "Side-Scroller game based on object-oriented approach. Help Sharkie to fight against different underwater animals.",
+            "BUTTON_NEXT": "Next project"
+        }
+    },
+    "REVIEW": {
+        "SUBTITLE": "What my colleagues say about me",
+        "REVIEW_1": "Working with Alex was a great experience — he was always willing to help and stayed highly motivated when challenges came up. His persistence in finding the right solution made a real difference for the whole team.",
+        "REVIEW_2": "Alex has a talent for explaining complex topics in a simple and understandable way. This made it much easier to follow the project's progress and move forward efficiently as a team.",
+        "REVIEW_3": "Alex consistently kept an overview of tasks and priorities, which brought clarity and structure to the project. Thanks to his organized approach, collaboration felt smooth and well-coordinated."
+    },
+    "CONTACT": {
+        "SUBTITLE": "Contact me",
+        "TITLE": "Let's work together",
+        "P_BOLD": "Got a problem to solve?",
+        "P_1": "My structured and solution-oriented approach will help us find the best way to implement your idea.",
+        "P_2": "Need a web developer? ",
+        "SPAN": "Let's talk!",
+        "FORM": {
+            "LABEL_NAME": "What's your name?",
+            "PLACEHOLDER_NAME": "Your name goes here",
+            "REQUIRED_NAME": "Please enter your name.",
+            "LABEL_MAIL": "What's your email?",
+            "PLACEHOLDER_MAIL": "yourmail@email.com",
+            "VALID_MAIL": "Please enter a valid email.",
+            "REQUIRED_MAIL": "Email is required.",
+            "LABEL_MESSAGE": "How can I help you?",
+            "PLACEHOLDER_MESSAGE": "Hello Alex, I am interested in...",
+            "REQUIRED_MESSAGE": "Please enter a message.",
+            "LENGTH_MESSAGE": "Message must be at least 10 characters long.",
+            "LABEL_CHECKBOX_1": "I've read the",
+            "LABEL_CHECKBOX_2": "and agree to the processing of my data as outlined.",
+            "LINK_CHECKBOX": "privacy policy",
+            "REQUIRED_CHECKBOX": "Please accept the privacy policy.",
+            "BUTTON_SUBMIT": "Say Hello"
+        }
+    },
+    "FOOTER": {
+        "JOB": "Web Developer",
+        "LOCATION": "Hanover Germany",
+        "LINK_NOTICE": "Legal Notice"
+    },
+    "PRIVACY": {
+        "TITLE": "Privacy Policy",
+        "T1": "General information",
+        "P1": "Protecting your personal data is very important to me. I treat personal data confidentially and in accordance with the statutory data protection regulations (DSGVO) and this privacy policy.",
+        "T2": "Collection and processing of personal data",
+        "P2": "This website can generally be visited without providing any personal data. Personal data is only collected if you voluntarily provide it to me.",
+        "T3": "Contact form",
+        "P3": "When you contact me via the contact form, the information you provide (e.g., name, email address, and message) will be stored to process your request and for any follow-up questions. Legal basis: Art. 6 para. 1 lit. b DSGVO (Processing your request) The data will not be shared with third parties and will only be stored for as long as necessary to process your request.",
+        "T4": "Cookies",
+        "P4": "This website does not use cookies that store personal data or are used for analysis or marketing purposes.",
+        "T5": "Your Rights",
+        "P5": "You have the right to access your stored personal data at any time, including information about their origin, recipient, and the purpose of processing. You also have the right to rectify, restrict, transfer, withdraw, or delete this data. If you believe that the processing of your data violates data protection law, you can file a complaint with the relevant supervisory authority.",
+        "T6": "Changes to this privacy policy",
+        "P6": "I reserve the right to amend this privacy policy to adapt it to current legal requirements or changes to the website."
+    },
+    "LEGALNOTICE": {
+        "TITLE": "Legal Notice",
+        "T1": "Imprint",
+        "P1": "",
+        "T2": "",
+        "P2": "",
+        "T3": "Acceptance of terms",
+        "P3": "By accessing and using Portfolio (Product), you acknowledge and agree to the following terms and conditions, and any policies, guidelines, or amendments thereto that may be presented to you from time to time. We, the listed students, may update or change the terms and conditions from time to time without notice.",
+        "T4": "Scrope and ownership of the product",
+        "P4": "Portfolio has been developed as part of a student group project in a web development bootcamp at the Developer Akademie GmbH. It has an educational purpose and is not intended for extensive personal & business usage. As such, we cannot guarantee consistent availability, reliability, accuracy, or any other aspect of quality regarding this Product.<br><br>The design of Portfolio is owned by the Developer Akademie GmbH. Unauthorized use, reproduction, modification, distribution, or replication of the design is strictly prohibited.",
+        "T5": "Proprietary rights",
+        "P5": "Aside from the design owned by Developer Akademie GmbH, we, the listed students, retain all proprietary rights in Portfolio, including any associated copyrighted material, trademarks, and other proprietary information.",
+        "T6": "User of the product",
+        "P6": "Portfolio is intended to be used for lawful purposes only, in accordance with all applicable laws and regulations. Any use of Portfolio for illegal activities, or to harass, harm, threaten, or intimidate another person, is strictly prohibited. You are solely responsible for your interactions with other users of Portfolio.",
+        "T7": "Disclaimer of warranties and limitation of liability",
+        "P7": "Portfolio is provided 'as is' without warranty of any kind, whether express or implied, including but not limited to the implied warranties of merchantability, fitness for a particular purpose, and non-infringement. In no event will we, the listed students, or the Developer Akademie, be liable for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, data, or other intangible losses, even if we have been advised of the possibility of such damages, arising out of or in connection with the use or performance of Portfolio.",
+        "T8": "Indemnity",
+        "P8": "You agree to indemnify, defend and hold harmless us, the listed students, the Developer Akademie, and our affiliates, partners, officers, directors, agents, and employees, from and against any claim, demand, loss, damage, cost, or liability (including reasonable legal fees) arising out of or relating to your use of Portfolio and/or your breach of this Legal Notice.<br><br>For any questions or notices, please contact us at alexander.putilin@yahoo.de.<br><br>Date: January 26, 2026"
+    }
+}

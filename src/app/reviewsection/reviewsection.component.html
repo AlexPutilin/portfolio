@@ -1,13 +1,13 @@
 <section>
     <div class="content-limit">
         <div class="content">
-            <p class="subtitle">What my colleagues say about me</p>
+            <p class="subtitle">{{"REVIEW.SUBTITLE" | translate}}</p>
             <div class="diashow-frame">
                 <div class="diashow" #diashow [style.transform]="transform">
                     @for (review of reviews; track $index) {
                         <div class="review-box" [class.preview-active]="currentIndex === $index">
                             <img class="quotes" src="./imgs/quotes.png">
-                            <p>{{reviews[$index].review}}</p>
+                            <p>{{reviews[$index].review | translate}}</p>
                             <div>
                                 <span class="line"></span>
                                 <span>{{reviews[$index].name}}</span>

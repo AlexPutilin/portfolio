@@ -5,7 +5,8 @@ import { NgIf } from '@angular/common';
   selector: 'app-menu',
   imports: [NgIf],
   templateUrl: './menu.component.html',
-  styleUrl: './menu.component.scss'
+  styleUrl: './menu.component.scss',
+  standalone: true
 })
 export class MenuComponent {
   @Input() menuOpen = false;

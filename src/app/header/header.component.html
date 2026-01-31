@@ -2,52 +2,66 @@
     <div class="content-limit">
         <nav>
             <div class="switch-wrapper">
-                <input id="DE" type="radio" name="language-desktop" value="DE" [checked]="language === 'DE'" (change)="language = 'DE'">
-                <label class="switch" for="DE">DE</label>
-                <input id="EN" type="radio" name="language-desktop" value="EN" [checked]="language === 'EN'" (change)="language = 'EN'">
-                <label class="switch" for="EN">EN</label>
+                <input 
+                    id="de" 
+                    type="radio" 
+                    name="language-desktop" 
+                    value="de" 
+                    [(ngModel)]="language" 
+                    (ngModelChange)="onLanguageChange($event)" 
+                    (change)="setLanguage('de')">
+                <label class="switch" for="de">DE</label>
+                <input 
+                    id="en" 
+                    type="radio" 
+                    name="language-desktop" 
+                    value="en" 
+                    [(ngModel)]="language" 
+                    (ngModelChange)="onLanguageChange($event)" 
+                    (change)="setLanguage('en')">
+                <label class="switch" for="en">EN</label>
                 <span class="toggle"></span>
             </div>
             <div class="nav-link">
-                <a href="#about-section">About me</a>
+                <a href="#about-section">{{'HEADER.ABOUT_ME_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#skills-section">Skills</a>
+                <a href="#skills-section">{{'HEADER.SKILLS_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#projects-section">Projects</a>
+                <a href="#projects-section">{{'HEADER.PROJECTS_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#contact-section">Contact</a>
+                <a href="#contact-section">{{'HEADER.CONTACT_LABEL' | translate}}</a>
                 <span></span>
             </div>
         </nav>
         <app-logo></app-logo>
         <app-menu [menuOpen]="menuOpen" (open)="openMenu()" (close)="closeMenu()">
             <div class="nav-link">
-                <a href="#about-section" (click)="closeMenu()">About me</a>
+                <a href="#about-section" (click)="closeMenu()">{{'HEADER.ABOUT_ME_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#skills-section" (click)="closeMenu()">Skills</a>
+                <a href="#skills-section" (click)="closeMenu()">{{'HEADER.SKILLS_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#projects-section" (click)="closeMenu()">Projects</a>
+                <a href="#projects-section" (click)="closeMenu()">{{'HEADER.PROJECTS_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="nav-link">
-                <a href="#contact-section" (click)="closeMenu()">Contact</a>
+                <a href="#contact-section" (click)="closeMenu()">{{'HEADER.CONTACT_LABEL' | translate}}</a>
                 <span></span>
             </div>
             <div class="switch-wrapper">
-                <input id="DE-menu" type="radio" name="language-mobile" value="DE" [checked]="language === 'DE'" (change)="language = 'DE'">
-                <label class="switch" for="DE-menu">DE</label>
-                <input id="EN-menu" type="radio" name="language-mobile" value="EN" [checked]="language === 'EN'" (change)="language = 'EN'">
-                <label class="switch" for="EN-menu">EN</label>
+                <input id="de-menu" type="radio" name="language-mobile" value="de" [checked]="language === 'de'" (change)="setLanguage('de')">
+                <label class="switch" for="de-menu">DE</label>
+                <input id="en-menu" type="radio" name="language-mobile" value="en" [checked]="language === 'en'" (change)="setLanguage('en')">
+                <label class="switch" for="en-menu">EN</label>
                 <span class="toggle"></span>
             </div>
         </app-menu>

@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-legalnotice',
-  imports: [],
+  imports: [TranslateModule],
   templateUrl: './legalnotice.component.html',
-  styleUrl: './legalnotice.component.scss'
+  styleUrl: './legalnotice.component.scss',
+  standalone: true
 })
 export class LegalnoticeComponent {
 

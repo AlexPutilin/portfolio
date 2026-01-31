@@ -4,7 +4,8 @@ import { Component, Input } from '@angular/core';
   selector: 'app-link',
   imports: [],
   templateUrl: './link.component.html',
-  styleUrl: './link.component.scss'
+  styleUrl: './link.component.scss',
+  standalone: true
 })
 export class LinkComponent {
   @Input() href?: string;

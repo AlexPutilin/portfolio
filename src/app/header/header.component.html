@@ -58,9 +58,23 @@
                 <span></span>
             </div>
             <div class="switch-wrapper">
-                <input id="de-menu" type="radio" name="language-mobile" value="de" [checked]="language === 'de'" (change)="setLanguage('de')">
+                <input 
+                    id="de-menu" 
+                    type="radio" 
+                    name="language-mobile" 
+                    value="de" 
+                    [(ngModel)]="language" 
+                    (ngModelChange)="onLanguageChange($event)" 
+                    (change)="setLanguage('de')">
                 <label class="switch" for="de-menu">DE</label>
-                <input id="en-menu" type="radio" name="language-mobile" value="en" [checked]="language === 'en'" (change)="setLanguage('en')">
+                <input 
+                    id="en-menu" 
+                    type="radio" 
+                    name="language-mobile" 
+                    value="en" 
+                    [(ngModel)]="language" 
+                    (ngModelChange)="onLanguageChange($event)" 
+                    (change)="setLanguage('en')">
                 <label class="switch" for="en-menu">EN</label>
                 <span class="toggle"></span>
             </div>

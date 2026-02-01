@@ -79,6 +79,13 @@
     }
 }
 
+@media (max-height: 992px) {
+    .btn {
+        font-size: 20px;
+        padding: 12px 24px;
+    }
+}
+
 @media (max-height: 600px) and (orientation: landscape) {
     .btn {
         font-size: 20px;

@@ -39,7 +39,7 @@
                 <span></span>
             </div>
         </nav>
-        <app-logo></app-logo>
+        <app-logo [routerLink]="'/'"></app-logo>
         <app-menu [menuOpen]="menuOpen" (open)="openMenu()" (close)="closeMenu()">
             <div class="nav-link">
                 <a href="#about-section" (click)="closeMenu()">{{'HEADER.ABOUT_ME_LABEL' | translate}}</a>

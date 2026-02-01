@@ -20,7 +20,7 @@ export class ProjectoverviewComponent {
       imgUrl: "./imgs/pokedex.jpg",
       techs: ['JavaScript','HTML','CSS','Rest-API'],
       github: "https://github.com/AlexPutilin/Pokedex",
-      live: "https://alexander-putilin.developerakademie.net/modul9/pokedex/html/index.html",
+      live: "http://pokeindex.alexander-putilin.de",
     },
     {
       name: "Join",
@@ -28,7 +28,7 @@ export class ProjectoverviewComponent {
       imgUrl: "./imgs/join.jpg",
       techs: ['JavaScript','HTML','CSS','Firebase'],
       github: "https://github.com/AlexPutilin/Join",
-      live: "https://join-459.developerakademie.net/join/index.html",
+      live: "http://join.alexander-putilin.de/",
     },
     {
       name: "Sharkie",
@@ -36,7 +36,7 @@ export class ProjectoverviewComponent {
       imgUrl: "./imgs/sharkie.jpg",
       techs: ['JavaScript','HTML','CSS'],
       github: "https://github.com/AlexPutilin/Sharkie",
-      live: "https://alexander-putilin.developerakademie.net/sharkie/index.html",
+      live: "http://sharkie.alexander-putilin.de",
     },
   ];
 

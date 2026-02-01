@@ -1,4 +1,9 @@
 <div class="link-wrapper">
     <span></span>
-    <a [href]="href" [target]="target"><ng-content></ng-content></a>
+    <a 
+        [href]="href" 
+        [target]="target"
+        [routerLink]="routerLink">
+        <ng-content></ng-content>
+    </a>
 </div>

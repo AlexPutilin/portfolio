@@ -15,12 +15,12 @@
 .modal {
     width: 100%;
     max-width: 1440px;
-    height: 720px;
+    height: 760px;
     padding: 64px;
     border-radius: 32px;
     border: 2px solid var(--color-main);
     background: url('/imgs/Background_1.svg');
-    background-size: cover; 
+    background-size: cover;
 }
 
 .modal-layout {
@@ -37,8 +37,11 @@
             >p {
                 flex: 1;
             }
-            >h1 {
-                color: var(--color-main);
+            >.title-wrapper {
+                @include flex(column);
+                >h1 {
+                    color: var(--color-main);
+                }
             }
             >h3 {
                 color: var(--color-main);
@@ -133,6 +136,12 @@
                 >.btn-container {
                     justify-content: center;
                 }
+                >.title-wrapper {
+                    @include flex(row, center, start, 16px);
+                    >h1, h2 {
+                        font-size: 64px;
+                    }
+                }
             }
             .img-wrapper {
                 flex-grow: auto;
@@ -148,6 +157,41 @@
     }
 }
 
+@media (max-height: 992px) {
+    .modal {
+        padding: 24px;
+    }
+    .modal-layout {
+        gap: 16px;
+        .content {
+            >.info {
+                gap: 16px;
+                >.title-wrapper {
+                    @include flex(row, center, start, 16px);
+                    >h1, h2 {
+                        font-size: 48px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-layout {
+        .content {
+            >.info {
+                >.title-wrapper {
+                    @include flex(row, center, start, 16px);
+                    >h1, h2 {
+                        font-size: 48px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 476px) {
     .modal {
         padding: 24px;
@@ -158,6 +202,12 @@
             gap: 24px;
             >.info {
                 gap: 16px;
+                >.title-wrapper {
+                    @include flex(row, center, start, 16px);
+                    >h1, h2 {
+                        font-size: 32px;
+                    }
+                }
                 .techs {
                     gap: 8px;
                 }
@@ -173,7 +223,7 @@
     }
     .tech-label {
         span {
-            font-size: 14px;
+            font-size: 16px;
         }
         img {
             width: 20px;
@@ -190,6 +240,10 @@
     }
 }
 
+@media (orientation: landscape) and (max-height: 1200px) {
+
+}
+
 @media (orientation: landscape) and (max-height: 768px) {
     .modal {
         padding: 16px;
@@ -203,8 +257,10 @@
                 >p {
                     font-size: 16px;
                 }
-                >h1 {
-                    font-size: 56px;
+                >.title-wrapper {
+                    >h1, h2 {
+                        font-size: 48px;
+                    }
                 }
                 >h3 {
                     font-size: 24px;
@@ -234,8 +290,10 @@
                 >p {
                     font-size: 16px;
                 }
-                >h1 {
-                    font-size: 40px;
+                >.title-wrapper {
+                    >h1, h2 {
+                        font-size: 40px;
+                    }
                 }
                 >h3 {
                     font-size: 20px;
@@ -252,7 +310,7 @@
     }
     .tech-label {
         span {
-            font-size: 14px;
+            font-size: 16px;
         }
         img {
             width: 20px;

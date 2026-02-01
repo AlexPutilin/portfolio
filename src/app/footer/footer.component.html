@@ -1,7 +1,7 @@
 <footer>
     <div class="content-limit">
         <div class="company-info">
-            <app-logo></app-logo>
+            <app-logo [scrollToTop]="true"></app-logo>
             <span>{{"FOOTER.JOB" | translate}}</span>
             <span>{{"FOOTER.LOCATION" | translate}}</span>
         </div>
@@ -10,7 +10,7 @@
             <app-link href="https://github.com/AlexPutilin" target="_blank">Github</app-link>
             <app-link href="https://www.linkedin.com/in/alexander-putilin-6062b7316/" target="_blank">LinkedIn</app-link>
             <app-link href="mailto: alexander.putilin@yahoo.de">Email</app-link>
-            <app-link href="/legal-notice">{{"FOOTER.LINK_NOTICE" | translate}}</app-link>
+            <app-link [routerLink]="'./legal-notice'">{{"FOOTER.LINK_NOTICE" | translate}}</app-link>
         </nav>
     </div>
 </footer>

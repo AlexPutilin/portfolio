@@ -13,14 +13,16 @@
 
             <div class="content">
                 <div class="info">
-                    <h1>0{{projectIndex + 1}}</h1>
-                    <h2>{{projects[projectIndex].name}}</h2>
+                    <div class="title-wrapper">
+                        <h1>0{{projectIndex + 1}}</h1>
+                        <h2>{{projects[projectIndex].name}}</h2>
+                    </div>
                     <h3>{{"PORTFOLIO.PROJECT.SUBTITLE" | translate}}</h3>
                     <p>{{projects[projectIndex].description | translate}}</p>
                     <div class="techs">
                         @for (tech of projects[projectIndex].techs; track $index) {
                             <div class="tech-label">
-                                <img [src]="'./icons/' + tech + '.svg'">
+                                <img [src]="'./svg/' + tech + '.svg'">
                                 <span>{{tech}}</span>
                             </div>
                         }

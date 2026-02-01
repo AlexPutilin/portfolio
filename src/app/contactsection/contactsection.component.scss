@@ -66,6 +66,8 @@ label {
 }
 
 .checkbox-container {
+    align-items: center;
+    gap: 16px;
     margin-bottom: 16px;
 }
 
@@ -77,10 +79,6 @@ label {
     gap: 12px;
     font-size: 18px;
     color: var(--text-base);
-}
-
-.error-message {
-    color: var(--color-error);
 }
 
 .checkbox-wrapper {
@@ -117,6 +115,10 @@ label {
         }
     }
     >span {text-align: start;}
+}
+
+.error-message {
+    color: var(--color-error);
 }
 
 @media (max-width: 1200px) {

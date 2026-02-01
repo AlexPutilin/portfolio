@@ -22,13 +22,13 @@
         "P": "Hallo. Ich bin Alex, ein strukturierter und detailorientierter Webentwickler in Ausbildung mit einer großen Leidenschaft für die Entwicklung sinnvoller und benutzerorientierter Anwendungen.",
         "INFO_1": "Ich bin in Hannover ansässig und stehe auch für Remote-Arbeit zur Verfügung.",
         "INFO_2": "Ich habe Freude daran, Ideen in reale Projekte umzusetzen und meine Fähigkeiten durch praktisches Lernen stetig zu verbessern. Besonders begeistert mich die Entwicklung moderner Weblösungen und die Erforschung neuer Technologien.",
-        "INFO_3": "Wenn ich vor einer Herausforderung stehe, analysiere ich sie gründlich und suche nach verschiedenen Lösungsansätzen, bis ich die effektivste gefunden habe. Ich bleibe hartnäckig, auch wenn es schwierig wird, und lerne aus jedem Schritt. Wenn Du jemanden suchst, der neugierig, zuverlässig und motiviert ist, an jeder Herausforderung zu wachsen, bin ich die richtige Person für die Zusammenarbeit."
+        "INFO_3": "Ich analysiere Herausforderungen gründlich, entwickle verschiedene Lösungsansätze und bleibe hartnäckig, bis ich die beste Lösung gefunden habe. Dabei lerne ich stetig dazu und arbeite neugierig, zuverlässig und motiviert an jeder Aufgabe."
     },
     "SKILLS": {
         "SUBTITLE": "Technologien",
         "TITLE": "Skill Set",
         "BUTTON": "Let's Talk",
-        "P_1": "Als Junior-Frontend-Entwickler habe ich bereits in verschiedenen Projekten Erfahrung gesammelt und dabei responsive und intuitive Benutzeroberflächen entwickelt. Mir macht es Spaß, Ideen in funktionale und gut strukturierte Lösungen umzusetzen und meine Arbeitsweise stetig zu verbessern. Ich bin immer offen für neue Technologien und erweitere aktuell meine Kenntnisse im Backend-Bereich, um mich zum Full-Stack-Entwickler weiterzuentwickeln.",
+        "P_1": "Als Junior-Frontend-Entwickler habe ich Erfahrung in verschiedenen Projekten gesammelt und responsive, intuitive Benutzeroberflächen umgesetzt. Ich setze Ideen gern in strukturierte Lösungen um, bilde mich kontinuierlich weiter und erweitere aktuell meine Backend-Kenntnisse mit dem Ziel, Full-Stack-Entwickler zu werden.",
         "P_2": "Nehme gerne Kontakt mit mir auf. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
         "P_BOLD_1.1": "Du benötigst einen ",
         "P_BOLD_1.2": "anderen Skill?",
@@ -51,13 +51,13 @@
     },
     "REVIEW": {
         "SUBTITLE": "Was meine Mitarbeiter über mich sagen",
-        "REVIEW_1": "Die Zusammenarbeit mit Alex war eine tolle Erfahrung – er war stets hilfsbereit und blieb auch bei Herausforderungen hochmotiviert. Seine Beharrlichkeit bei der Suche nach der richtigen Lösung war für das gesamte Team von unschätzbarem Wert.",
+        "REVIEW_1": "Die Zusammenarbeit mit Alex war sehr positiv – er war hilfsbereit, motiviert und seine Beharrlichkeit war für das Team äußerst wertvoll.",
         "REVIEW_2": "Alex hat die Gabe, komplexe Themen einfach und verständlich zu erklären. Dadurch war es viel einfacher, den Projektfortschritt zu verfolgen und als Team effizient voranzukommen.",
-        "REVIEW_3": "Alex behielt stets den Überblick über Aufgaben und Prioritäten, was dem Projekt Klarheit und Struktur verlieh. Dank seiner strukturierten Vorgehensweise verlief die Zusammenarbeit reibungslos und gut koordiniert."
+        "REVIEW_3": "Alex behielt stets den Überblick über Aufgaben und Prioritäten und sorgte so für eine reibungslose, strukturierte Zusammenarbeit."
     },
     "CONTACT": {
         "SUBTITLE": "Kontakt",
-        "TITLE": "Lass uns zusammenarbeiten",
+        "TITLE": "Auf eine Zusammenarbeit",
         "P_BOLD": "Gibt es ein Problem zu lösen?",
         "P_1": "Durch meine strukturierte, und Lösungsorientierte Arbeitsweise finden wir gemeinsam den besten Weg um Deine Idee umzusetzen.",
         "P_2": "Du benötigst einen Web-Entwickler? ",

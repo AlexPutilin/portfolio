@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-link',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './link.component.html',
   styleUrl: './link.component.scss',
   standalone: true
@@ -10,4 +11,5 @@ import { Component, Input } from '@angular/core';
 export class LinkComponent {
   @Input() href?: string;
   @Input() target: '_self' | '_blank' = '_self';
+  @Input() routerLink!: string;
 }

@@ -8,10 +8,11 @@ section {
 }
 
 .content {
-    height: 100vh;
+    min-height: 1200px;
     width: 100%;
     padding-block: 100px;
     @include flex($jc: space-between, $ai: center);
+    flex-shrink: 0;
 }
 
 .profile {
@@ -24,6 +25,7 @@ section {
         width: 640px;
         height: 640px;
         border-radius: 32px;
+        flex-shrink: 0;
         overflow: hidden;
         transition: all 125ms ease-in-out;
         >img {
@@ -80,6 +82,7 @@ section {
 }
 
 .about-me-wrapper {
+    flex-shrink: 0;
     align-self: end;
 }
 

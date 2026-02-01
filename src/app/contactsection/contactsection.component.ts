@@ -3,10 +3,12 @@ import { ButtonComponent } from '../ui/buttons/button/button.component';
 import { FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
+import { RouterLink } from "@angular/router";
+import { TestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'app-contactsection',
-  imports: [ButtonComponent, FormsModule, TranslateModule],
+  imports: [ButtonComponent, FormsModule, TranslateModule, RouterLink],
   templateUrl: './contactsection.component.html',
   styleUrl: './contactsection.component.scss',
   standalone: true
@@ -43,18 +45,21 @@ export class ContactsectionComponent {
         .post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
+            this.hasSubmitted = false;
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
+      this.hasSubmitted = false;
+      console.log(`Email submitted: Contact`, this.contactData);
       ngForm.resetForm();
-      console.log(`Email submitted: Contact, ${this.contactData}`);
     }
   }
 
-
+  debug(text: string) {
+    console.log(text);
+  }
 }

@@ -81,16 +81,19 @@
                                         </div>
                                     </label>
                                 </div>
+                                
                                 <span>
                                     {{"CONTACT.FORM.LABEL_CHECKBOX_1" | translate}}
-                                    <a style="color: var(--color-main); text-decoration: none;" href="/privacy-policy">{{"CONTACT.FORM.LINK_CHECKBOX" | translate}}</a>
+                                    <a style="color: var(--color-main); text-decoration: none;" routerLink="./privacy-policy" (click)="debug('clicked')">{{"CONTACT.FORM.LINK_CHECKBOX" | translate}}</a>
                                     {{"CONTACT.FORM.LABEL_CHECKBOX_2" | translate}}
                                 </span>
                             </div>
+
                             @if (hasSubmitted && !privacyAccepted) {
                                 <span class="error-message">{{"CONTACT.FORM.REQUIRED_CHECKBOX" | translate}}</span>
                             }
                         </div>
+                        
                         <div class="submit-container">
                             <app-button type="submit" [disabled]="!privacyAccepted">{{"CONTACT.FORM.BUTTON_SUBMIT" | translate}}</app-button>
                         </div>

@@ -86,6 +86,25 @@ section {
     align-self: end;
 }
 
+.profile {
+    opacity: 0;
+    transform: translateX(-64px);
+    transition: all 400ms ease-out;
+}
+
+.about-me-wrapper {
+    opacity: 0;
+    transform: translateX(64px);
+    transition: all 400ms ease-out;
+    transition-delay: 400ms;
+}
+
+.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
 @media (max-width: 1500px) {
     .profile {
         width: 520px;

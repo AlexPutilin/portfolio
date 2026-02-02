@@ -1,4 +1,4 @@
-import { Component, inject  } from '@angular/core';
+import { Component, ElementRef, inject, ViewChild  } from '@angular/core';
 import { ButtonComponent } from '../ui/buttons/button/button.component';
 import { AbstractControl, FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
@@ -58,5 +58,19 @@ export class ContactsectionComponent {
       this.submitted = true;
       ngForm.resetForm();
     }
+  }
+
+  @ViewChild("contact", { read: ElementRef}) contactSection!: ElementRef;
+
+  private observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        (entry.target as HTMLElement).classList.add('in-view');
+      }
+    });
+  }, { threshold: 0.4 });
+
+  ngAfterViewInit() {
+    this.observer.observe(this.contactSection.nativeElement);
   }
 }

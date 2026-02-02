@@ -119,6 +119,17 @@ label {
     >span {text-align: start;}
 }
 
+.contact {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: all 200ms ease-out;
+}
+
+.contact.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 .error-message {
     color: var(--color-error);
 }

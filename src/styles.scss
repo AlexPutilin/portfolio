@@ -28,7 +28,8 @@
     font-family: 'Karla', 'Segoe UI', sans-serif;
     font-style: normal;
     scroll-behavior: smooth;
-    
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-secondary-active) #000;
 }
 
 html, body {

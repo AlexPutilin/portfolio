@@ -3,10 +3,12 @@
 section {
     width: 100%;
     padding-inline: min(64px, 5%);
+    position: relative;
     display: flex;
     justify-content: center;
     background: url('/imgs/Background_1.svg');
     background-size: cover;
+    overflow: hidden;
 }
 
 .content {

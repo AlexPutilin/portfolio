@@ -1,10 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject  } from '@angular/core';
 import { ButtonComponent } from '../ui/buttons/button/button.component';
-import { FormsModule, NgForm } from '@angular/forms';
+import { AbstractControl, FormsModule, NgForm } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterLink } from "@angular/router";
-import { TestBed } from '@angular/core/testing';
 
 @Component({
   selector: 'app-contactsection',
@@ -16,6 +15,7 @@ import { TestBed } from '@angular/core/testing';
 export class ContactsectionComponent {
   privacyAccepted: boolean = false;
   hasSubmitted: boolean = false;
+  submitted: boolean = false;
   
   mailTest = true;
 
@@ -28,7 +28,7 @@ export class ContactsectionComponent {
   }
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://portfolio.alexander-putilin.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -46,6 +46,7 @@ export class ContactsectionComponent {
         .subscribe({
           next: (response) => {
             this.hasSubmitted = false;
+            this.submitted = true;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -54,12 +55,8 @@ export class ContactsectionComponent {
         });
     } else if (ngForm.submitted && ngForm.valid && this.mailTest) {
       this.hasSubmitted = false;
-      console.log(`Email submitted: Contact`, this.contactData);
+      this.submitted = true;
       ngForm.resetForm();
     }
-  }
-
-  debug(text: string) {
-    console.log(text);
   }
 }

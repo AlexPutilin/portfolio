@@ -26,7 +26,8 @@
                                 #nameCtrl="ngModel"
                                 placeholder='{{"CONTACT.FORM.PLACEHOLDER_NAME" | translate}}' 
                                 autocomplete="off" 
-                                required>
+                                required
+                                pattern=".*\S.*">
                             @if (nameCtrl.invalid && hasSubmitted) {
                                 <span class="error-message">{{"CONTACT.FORM.REQUIRED_NAME" | translate}}</span>
                             }
@@ -60,13 +61,10 @@
                                 #messageCtrl="ngModel"
                                 placeholder='{{"CONTACT.FORM.PLACEHOLDER_MESSAGE" | translate}}'
                                 autocomplete="off"
-                                minlength="10"
-                                required>
-                            @if (messageCtrl.errors?.['required'] && hasSubmitted) {
+                                required
+                                pattern=".*\S.*">
+                            @if (messageCtrl.invalid && hasSubmitted) {
                                 <span class="error-message">{{"CONTACT.FORM.REQUIRED_MESSAGE" | translate}}</span>
-                            }
-                            @else if (messageCtrl.errors?.['minlength'] && hasSubmitted) {
-                                <span class="error-message">{{"CONTACT.FORM.LENGTH_MESSAGE" | translate}}</span>
                             }
                         </div>
                         <div class="checkbox-container">
@@ -84,7 +82,7 @@
                                 
                                 <span>
                                     {{"CONTACT.FORM.LABEL_CHECKBOX_1" | translate}}
-                                    <a style="color: var(--color-main); text-decoration: none;" routerLink="./privacy-policy" (click)="debug('clicked')">{{"CONTACT.FORM.LINK_CHECKBOX" | translate}}</a>
+                                    <a style="color: var(--color-main); text-decoration: none;" routerLink="./privacy-policy">{{"CONTACT.FORM.LINK_CHECKBOX" | translate}}</a>
                                     {{"CONTACT.FORM.LABEL_CHECKBOX_2" | translate}}
                                 </span>
                             </div>
@@ -95,7 +93,11 @@
                         </div>
                         
                         <div class="submit-container">
-                            <app-button type="submit" [disabled]="!privacyAccepted">{{"CONTACT.FORM.BUTTON_SUBMIT" | translate}}</app-button>
+                            @if (submitted) {
+                                <span style="color: #6ee468; font-size: 24px;">Danke für deine Nachricht</span>
+                            } @else {
+                                <app-button type="submit" [disabled]="!privacyAccepted">{{"CONTACT.FORM.BUTTON_SUBMIT" | translate}}</app-button>
+                            }
                         </div>
                     </form>
                 </div>

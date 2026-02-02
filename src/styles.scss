@@ -28,6 +28,7 @@
     font-family: 'Karla', 'Segoe UI', sans-serif;
     font-style: normal;
     scroll-behavior: smooth;
+    
 }
 
 html, body {
@@ -36,6 +37,8 @@ html, body {
     color: var(--text-base);
     background-color: var(--color-bg);
     user-select: none;
+    scrollbar-width: 6px;
+    scrollbar-color: var(--color-main);
 }
 
 button, a {

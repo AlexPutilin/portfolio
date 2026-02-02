@@ -19,7 +19,7 @@ export class ProjectoverviewComponent {
       description: 'PORTFOLIO.PROJECT.INFO_PROJECT_1',
       imgUrl: "./imgs/pokedex.jpg",
       techs: ['JavaScript','HTML','CSS','Rest-API'],
-      github: "https://github.com/AlexPutilin/Pokedex",
+      github: "https://github.com/AlexPutilin/PokeIndex",
       live: "http://pokeindex.alexander-putilin.de",
     },
     {

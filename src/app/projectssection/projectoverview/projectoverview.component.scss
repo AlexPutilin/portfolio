@@ -158,7 +158,11 @@
 }
 
 @media (max-height: 992px) {
+    .overlay {
+        padding: 0;
+    }
     .modal {
+        height: 100%;
         padding: 24px;
     }
     .modal-layout {

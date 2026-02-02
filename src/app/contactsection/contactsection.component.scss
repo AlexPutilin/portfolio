@@ -37,6 +37,7 @@ section {
 
 .input-wrapper {
     width: 100%;
+    min-height: 160px;
     padding: 24px;
     display: flex;
     flex-direction: column;
@@ -66,6 +67,7 @@ label {
 }
 
 .checkbox-container {
+    min-height: 100px;
     align-items: center;
     gap: 16px;
     margin-bottom: 16px;
@@ -128,12 +130,19 @@ label {
 }
 
 @media (max-width: 576px) {
-    .input-wrapper {padding: 16px}
+    .input-wrapper {
+        min-height: 120px;
+        padding: 16px;
+    }
     label {font-size: 24px}
     input[type="text"],
     input[type="email"] {
         padding-block: 12px;
         font-size: 16px;
+    }
+
+    .checkbox-container {
+        min-height: 80px;
     }
 
     .checkbox {

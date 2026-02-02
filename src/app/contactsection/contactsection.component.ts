@@ -17,7 +17,7 @@ export class ContactsectionComponent {
   hasSubmitted: boolean = false;
   submitted: boolean = false;
   
-  mailTest = true;
+  mailTest = false;
 
   http = inject(HttpClient);
 

@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true
 })
 export class HeaderComponent {
+  isMobile = window.innerWidth < 820;
   menuOpen = false;
   language: 'de' | 'en';
 
@@ -31,9 +32,28 @@ export class HeaderComponent {
 
   openMenu() {
     this.menuOpen = true;
+    document.body.style.overflow = 'hidden';
   }
 
   closeMenu() {
     this.menuOpen = false;
+    document.body.style.overflow = '';
   }
+
+  ngOnInit() {
+    window.addEventListener('resize', this.onResize);
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  }
+
+  onResize = () => {
+    this.isMobile = window.innerWidth < 820;
+
+    if (!this.isMobile) {
+      this.menuOpen = false;
+      document.body.style.overflow = '';
+    }
+  };
 }

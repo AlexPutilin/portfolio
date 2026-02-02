@@ -12,4 +12,12 @@ export class MenuComponent {
   @Input() menuOpen = false;
   @Output() close = new EventEmitter<void>();
   @Output() open = new EventEmitter<void>();
+
+  onOpenMenu() {
+    document.body.style.overflow = 'hidden';
+  }
+
+  ngOnDestroy() {
+    document.body.style.overflow = '';
+  }
 }
